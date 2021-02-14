@@ -1,0 +1,7 @@
+.nav-container {
+    width: 100%;
+    background-color: rgba(0, 58, 60, 0.8);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
