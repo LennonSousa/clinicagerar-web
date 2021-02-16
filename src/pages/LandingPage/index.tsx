@@ -1,8 +1,11 @@
 import React from 'react';
-import { Container, Row, Col, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Carousel, Image } from 'react-bootstrap';
+import { FaRegEnvelope, FaWhatsapp } from 'react-icons/fa'
 
 import PageHeader from '../../components/PageHeader';
 import './styles.css'
+
+import imageDoctors from '../../assets/images/undraw_doctors_hwty.svg';
 
 import ImageSlide01 from '../../assets/images/slide-item-01.png';
 import ImageSlide02 from '../../assets/images/slide-item-02.png';
@@ -32,15 +35,52 @@ function LandingPage() {
                     <div className="header-img-bottom-reverse-front" style={{ backgroundImage: `url(${carouselImgBottom})` }}></div>
                     <div className="header-img-bottom" style={{ backgroundImage: `url(${carouselImgBottom})` }}></div>
                     <div className="header-img-bottom-reverse" style={{ backgroundImage: `url(${carouselImgBottom})` }}></div>
-
-                    <Container className="middle-section">
-                        <Row>
-                            <Col>
-                            </Col>
-                        </Row>
-                    </Container>
                 </div>
 
+                <Container className="middle-section">
+                    <Row>
+                        <Col>
+                            <h1>Agende uma consulta</h1>
+                            <p className="title-dark">Você pode marcar uma consulta pelo whatsapp ou por e-mail.</p>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col sm={5}>
+                            <Image fluid src={imageDoctors} alt="Marcar uma consulta." />
+                        </Col>
+
+                        <Col sm={7}>
+                            <Row className="justify-content-center">
+                                <Col sm={8}>
+                                    <p className="title-light"><FaRegEnvelope size={24} />{` `}Por e-mail</p>
+                                </Col>
+
+                                <Col sm={8}>
+                                    <p className="sub-title">Você preenche os seus dados, escolhe o seu plano e retornaremos com a confirmação do seu agendamento.</p>
+                                </Col>
+
+                                <Col sm={8}>
+                                    <button type="button">Agendar por e-mail</button>
+                                </Col>
+                            </Row>
+
+                            <Row className="justify-content-center mt-5">
+                                <Col sm={8}>
+                                    <p className="title-light"><FaWhatsapp size={24} />{` `}Por whatsapp</p>
+                                </Col>
+
+                                <Col sm={8}>
+                                    <p className="sub-title">Você conversa diretamente com um de nossos atendentes e pode tirar todas as suas dúvidas agora mesmo.</p>
+                                </Col>
+
+                                <Col sm={8}>
+                                    <button type="button">Agendar por whatsapp</button>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+
+                </Container>
             </div>
         </div>
     );

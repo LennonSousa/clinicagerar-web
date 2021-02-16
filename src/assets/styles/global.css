@@ -11,3 +11,45 @@ body {
 body, input, button, textarea {
     font: 600 18px Nunito, sans-serif;
 }
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    color: #003A3C;
+}
+
+button {
+    background-color: #003A3C;
+    color: #ffffff;
+    height: 38px;
+    min-width: 235px;
+    margin: .25rem .125rem;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+button :hover {
+    background-color: #ffca2c;
+    border-color: #ffc720;
+}
+
+.title-light {
+    font-weight: 700;
+    font-size: 18px;
+    color: #003A3C;
+}
+
+.title-dark {
+    font-weight: 200;
+    font-size: 18px;
+    color: #969696;
+}
+
+.sub-title {
+    font-weight: 400;
+    font-size: 14px;
+    color: #969696;
+}

@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.4454ebfe.chunk.css",
-    "main.js": "/static/js/main.328809d3.chunk.js",
-    "main.js.map": "/static/js/main.328809d3.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9eb706a7.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9eb706a7.js.map",
+    "main.css": "/static/css/main.2034819e.chunk.css",
+    "main.js": "/static/js/main.f5632429.chunk.js",
+    "main.js.map": "/static/js/main.f5632429.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e14f6fa7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e14f6fa7.js.map",
     "static/css/2.2f9ba80b.chunk.css": "/static/css/2.2f9ba80b.chunk.css",
-    "static/js/2.c1db1640.chunk.js": "/static/js/2.c1db1640.chunk.js",
-    "static/js/2.c1db1640.chunk.js.map": "/static/js/2.c1db1640.chunk.js.map",
-    "static/js/3.f30e5fd5.chunk.js": "/static/js/3.f30e5fd5.chunk.js",
-    "static/js/3.f30e5fd5.chunk.js.map": "/static/js/3.f30e5fd5.chunk.js.map",
+    "static/js/2.5b637072.chunk.js": "/static/js/2.5b637072.chunk.js",
+    "static/js/2.5b637072.chunk.js.map": "/static/js/2.5b637072.chunk.js.map",
+    "static/js/3.3622e112.chunk.js": "/static/js/3.3622e112.chunk.js",
+    "static/js/3.3622e112.chunk.js.map": "/static/js/3.3622e112.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.2f9ba80b.chunk.css.map": "/static/css/2.2f9ba80b.chunk.css.map",
-    "static/css/main.4454ebfe.chunk.css.map": "/static/css/main.4454ebfe.chunk.css.map",
-    "static/js/2.c1db1640.chunk.js.LICENSE.txt": "/static/js/2.c1db1640.chunk.js.LICENSE.txt",
+    "static/css/main.2034819e.chunk.css.map": "/static/css/main.2034819e.chunk.css.map",
+    "static/js/2.5b637072.chunk.js.LICENSE.txt": "/static/js/2.5b637072.chunk.js.LICENSE.txt",
     "static/media/header-carousel-bottom.28bc43d5.svg": "/static/media/header-carousel-bottom.28bc43d5.svg",
     "static/media/logo-horizontal-branco.4aec0825.svg": "/static/media/logo-horizontal-branco.4aec0825.svg",
     "static/media/slide-item-01.e3a518f8.png": "/static/media/slide-item-01.e3a518f8.png",
-    "static/media/slide-item-02.f2fc2114.png": "/static/media/slide-item-02.f2fc2114.png"
+    "static/media/slide-item-02.f2fc2114.png": "/static/media/slide-item-02.f2fc2114.png",
+    "static/media/undraw_doctors_hwty.844dc56f.svg": "/static/media/undraw_doctors_hwty.844dc56f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9eb706a7.js",
+    "static/js/runtime-main.e14f6fa7.js",
     "static/css/2.2f9ba80b.chunk.css",
-    "static/js/2.c1db1640.chunk.js",
-    "static/css/main.4454ebfe.chunk.css",
-    "static/js/main.328809d3.chunk.js"
+    "static/js/2.5b637072.chunk.js",
+    "static/css/main.2034819e.chunk.css",
+    "static/js/main.f5632429.chunk.js"
   ]
 }
