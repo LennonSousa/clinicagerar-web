@@ -16,21 +16,13 @@ function LandingPage() {
                 <PageHeader />
                 <Carousel indicators={true} nextLabel="" prevLabel="" interval={5000} fade={true}>
                     <Carousel.Item style={{ backgroundColor: '#003A3C' }}>
-                        <Container>
-                            <Row className="header-carousel-row">
-                                <Col className="header-carousel-col" style={{ backgroundImage: `url(${ImageSlide01})` }}>
-                                </Col>
-                            </Row>
-                        </Container>
+                        <div className="header-carousel-col" style={{ backgroundImage: `url(${ImageSlide01})` }}>
+                        </div>
                     </Carousel.Item>
 
                     <Carousel.Item style={{ backgroundColor: '#F97352' }}>
-                        <Container>
-                            <Row className="header-carousel-row">
-                                <Col className="header-carousel-col" style={{ backgroundImage: `url(${ImageSlide02})` }}>
-                                </Col>
-                            </Row>
-                        </Container>
+                        <div className="header-carousel-col" style={{ backgroundImage: `url(${ImageSlide02})` }}>
+                        </div>
                     </Carousel.Item>
                 </Carousel>
             </header>
