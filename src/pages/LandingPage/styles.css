@@ -1,11 +1,106 @@
-.header-carousel-item {
-    width: 100%;
-    height: 500px;
-    background: linear-gradient(blue, green);
+header {
+    height: 600px;
+    position: relative;
 }
 
-.header-carousel-item-2 {
+.sticky {
+    position: fixed;
+    top: 0;
     width: 100%;
+    transition: all 0.5s ease;
+    animation: smoothScroll 1s forwards;
+  }
+
+.header-carousel-row {
+    height: 600px;
+}
+
+.header-carousel-col {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.middle-container {
+    position: relative;
+}
+
+.middle-waves {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.top {
+    bottom: inherit;
+    top: -50px;
+}
+
+.header-img-bottom-reverse-front {
+    background-size: contain;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    -webkit-animation: wave 36s linear infinite;
+    animation: wave 36s linear infinite;
+    animation-direction: reverse;
+    opacity: 0.2;
+}
+
+.header-img-bottom {
+    background-size: contain;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    -webkit-animation: wave 36s linear infinite;
+    animation: wave 36s linear infinite;
+    opacity: 0.5;
+}
+
+.header-img-bottom-reverse {
+    background-size: contain;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    -webkit-animation: wave 36s linear infinite;
+    animation: wave 15s linear infinite;
+    animation-direction: reverse;
+    opacity: 1;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0vw 100%;
+    }
+    100% {
+        background-position: 150vw 100%;
+    }
+}
+
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-142px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.middle-section {
     height: 500px;
-    background: linear-gradient(yellow, red);
+}
+
+@media (max-width: 768px) {
+    .top {
+        top: 38px;
+    }
 }

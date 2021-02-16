@@ -13,18 +13,18 @@ function PageHeader() {
                     <Navbar.Brand href="#home">
                         <img
                             src={logoImg}
-                            height="40"
+                            height="60"
                             className="d-inline-block align-top"
-                            alt="React Bootstrap logo"
+                            alt="Clínica Gerar"
                         />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Link to="/" className="nav-link">INÍCIO</Link>
-                            <Link to="/menu/categories" className="nav-link">SOBRE NÓS</Link>
-                            <Link to="/restaurant" className="nav-link">AGENDAMENTO</Link>
-                            <Link to="/ordering" className="nav-link">CONTATO</Link>
+                            <Link to="/" className="nav-link nav-header-link-active">INÍCIO</Link>
+                            <Link to="/menu/categories" className="nav-link nav-header-link">SOBRE NÓS</Link>
+                            <Link to="/restaurant" className="nav-link nav-header-link">AGENDAMENTO</Link>
+                            <Link to="/ordering" className="nav-link nav-header-link">CONTATO</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

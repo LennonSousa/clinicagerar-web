@@ -5,3 +5,23 @@
     top: 0;
     z-index: 2;
 }
+
+.nav-header-link {
+    font-weight: 200;
+    margin: 0 25px 0 25px;
+    font-size: 18px;
+}
+
+.nav-header-link-active {
+    font-weight: 200;
+    margin: 0 25px 0 25px;
+    font-size: 18px;
+    border-bottom: #F97352 5px solid;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        position: relative;
+        background-color: rgba(0, 58, 60, 1);
+    }
+}
