@@ -93,7 +93,25 @@ header {
 }
 
 @media (max-width: 768px) {
+    header {
+        height: 400px;
+    }
+
     .top {
         top: 38px;
+    }
+
+    .header-carousel-col {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1400px) {
+    header {
+        height: 700px;
+    }
+
+    .header-carousel-col {
+        height: 700px;
     }
 }
