@@ -1,0 +1,63 @@
+.service-col {
+    height: 250px;
+    padding: 15px;
+    cursor: default;
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0);
+    border: 8px #969696 solid;
+    border-radius: 3px;
+    box-shadow: 2px 3px 5px 2px rgb(0 0 0 / 24%);
+    transition-duration: 0.4s;
+    position: relative;
+}
+
+.service-row-title {
+    opacity: 1;
+    transition-duration: 0.4s;
+}
+
+.service-col-title {
+    text-align: center;
+    color: #ffffff;
+    padding-top: 1rem;
+    background: linear-gradient(0, #00000000 25%, #000000d6 100%);
+    height: 85px;
+}
+
+.service-overlap {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0, #f97352 25%, rgba(255, 255, 255, 0) 100%);
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 100%;
+}
+
+.service-overlap-row {
+    height: 100%;
+    align-items: flex-end;
+}
+
+.service-overlap p {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0px 12px;
+}
+
+.service-col:hover .service-overlap {
+    top: 0;
+}
+
+.service-col:hover .service-image {
+    border: 8px #f97352 solid;
+}
+
+.service-col:hover .service-row-title {
+    opacity: 0.25;
+}

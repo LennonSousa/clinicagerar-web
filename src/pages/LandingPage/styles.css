@@ -97,7 +97,7 @@ header {
 }
 
 .services-article {
-    height: 100%;
+    min-height: 500px;
 }
 
 @media (max-width: 768px) {

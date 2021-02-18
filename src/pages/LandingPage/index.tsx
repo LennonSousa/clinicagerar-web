@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row, Col, Carousel, Image } from 'react-bootstrap';
 import { FaRegEnvelope, FaWhatsapp } from 'react-icons/fa'
 import ScrollReveal from 'scrollreveal';
 
 import PageHeader from '../../components/PageHeader';
+import OurService from '../../components/OurServices';
+
 import './styles.css'
 
 import imageDoctors from '../../assets/images/undraw_doctors_hwty.svg';
@@ -13,9 +15,16 @@ import ImageSlide02 from '../../assets/images/slide-item-02.png';
 
 import carouselImgBottom from '../../assets/images/header-carousel-bottom.svg';
 
+import serviceMedicineFetal from '../../assets/images/service-medicine-fetal.jpg';
+import serviceHumanReproduction from '../../assets/images/service-human-reproduction.jpg';
+import serviceUltra from '../../assets/images/service-ultra.jpg';
+
 function LandingPage() {
-    ScrollReveal().reveal('.image-doctors', { delay: 375, reset: true, duration: 1000, origin: 'left', distance: '50%' });
-    ScrollReveal().reveal('.col-mark', { delay: 500, reset: true, duration: 1500 });
+    useEffect(() => {
+        ScrollReveal().reveal('.section-col-back h1', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
+        ScrollReveal().reveal('.image-doctors', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
+        ScrollReveal().reveal('.col-mark', { delay: 500, duration: 1500 });
+    }, []);
 
     return (
         <>
@@ -43,7 +52,10 @@ function LandingPage() {
 
                 <Container className="middle-section">
                     <Row>
-                        <Col>
+                        <div className="section-col-back block-with-text">
+                            <h1>Agende uma consulta</h1>
+                        </div>
+                        <Col className="section-col">
                             <h1>Agende uma consulta</h1>
                             <p className="title-dark">Você pode marcar uma consulta pelo whatsapp ou por e-mail.</p>
                         </Col>
@@ -89,15 +101,43 @@ function LandingPage() {
             <article className="services-article section-top">
                 <Container>
                     <Row>
-                        <Col>
+                        <div className="section-col-back block-with-text">
+                            <h1>Nossos serviços</h1>
+                        </div>
+
+                        <Col className="section-col">
                             <h1>Nossos serviços</h1>
                             <p className="title-dark">Oferecemos os melhores serviços para você.</p>
                         </Col>
                     </Row>
 
-                    <Row>
-                        <Col>
-                        </Col>
+                    <Row className="justify-content-center">
+                        <OurService ourService={
+                            {
+                                id: 1,
+                                title: 'Reprodução humana',
+                                description: 'Técnica também conhecida como "bebê de proveta", a fertilização in vitro (FIV) é um processo em que a fertilização do óvulo com espermatozoide é feita em laboratório.',
+                                image: serviceHumanReproduction
+                            }
+                        } />
+
+                        <OurService ourService={
+                            {
+                                id: 2,
+                                title: 'Medicina fetal',
+                                description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
+                                image: serviceMedicineFetal
+                            }
+                        } />
+
+                        <OurService ourService={
+                            {
+                                id: 3,
+                                title: 'Ultrassonografia',
+                                description: 'A ultrassonografia é uma técnica médica, não invasiva, utilizada para reproduzir imagens dinâmicas – observadas em tempo real - dos órgãos internos, tecidos, rede vascular e fluxo sanguíneo, auxiliando, complementando e interagindo com outras especialidades médicas.',
+                                image: serviceUltra
+                            }
+                        } />
                     </Row>
                 </Container>
             </article>
