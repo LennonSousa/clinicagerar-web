@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Carousel, Image } from 'react-bootstrap';
 import { FaRegEnvelope, FaWhatsapp } from 'react-icons/fa'
+import ScrollReveal from 'scrollreveal';
 
 import PageHeader from '../../components/PageHeader';
 import './styles.css'
@@ -13,8 +14,11 @@ import ImageSlide02 from '../../assets/images/slide-item-02.png';
 import carouselImgBottom from '../../assets/images/header-carousel-bottom.svg';
 
 function LandingPage() {
+    ScrollReveal().reveal('.image-doctors', { delay: 375, reset: true, duration: 1000, origin: 'left', distance: '50%' });
+    ScrollReveal().reveal('.col-mark', { delay: 500, reset: true, duration: 1500 });
+
     return (
-        <div>
+        <>
             <header>
                 <PageHeader />
                 <Carousel indicators={true} nextLabel="" prevLabel="" interval={5000} fade={true}>
@@ -30,7 +34,7 @@ function LandingPage() {
                 </Carousel>
             </header>
 
-            <div className="middle-container">
+            <section className="middle-container">
                 <div className="middle-waves top" >
                     <div className="header-img-bottom-reverse-front" style={{ backgroundImage: `url(${carouselImgBottom})` }}></div>
                     <div className="header-img-bottom" style={{ backgroundImage: `url(${carouselImgBottom})` }}></div>
@@ -46,11 +50,11 @@ function LandingPage() {
                     </Row>
                     <Row>
                         <Col sm={5}>
-                            <Image fluid src={imageDoctors} alt="Marcar uma consulta." />
+                            <Image fluid className="image-doctors" src={imageDoctors} alt="Marcar uma consulta." />
                         </Col>
 
-                        <Col sm={7}>
-                            <Row className="justify-content-center">
+                        <Col className="col-mark pt-2 pb-5" sm={7}>
+                            <Row className="justify-content-end">
                                 <Col sm={8}>
                                     <p className="title-light"><FaRegEnvelope size={24} />{` `}Por e-mail</p>
                                 </Col>
@@ -60,11 +64,11 @@ function LandingPage() {
                                 </Col>
 
                                 <Col sm={8}>
-                                    <button type="button">Agendar por e-mail</button>
+                                    <button className="button-standard" type="button">Agendar por e-mail</button>
                                 </Col>
                             </Row>
 
-                            <Row className="justify-content-center mt-5">
+                            <Row className="justify-content-end mt-5">
                                 <Col sm={8}>
                                     <p className="title-light"><FaWhatsapp size={24} />{` `}Por whatsapp</p>
                                 </Col>
@@ -74,15 +78,30 @@ function LandingPage() {
                                 </Col>
 
                                 <Col sm={8}>
-                                    <button type="button">Agendar por whatsapp</button>
+                                    <button className="button-standard" type="button">Agendar por whatsapp</button>
                                 </Col>
                             </Row>
                         </Col>
                     </Row>
-
                 </Container>
-            </div>
-        </div>
+            </section>
+
+            <article className="services-article section-top">
+                <Container>
+                    <Row>
+                        <Col>
+                            <h1>Nossos serviços</h1>
+                            <p className="title-dark">Oferecemos os melhores serviços para você.</p>
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col>
+                        </Col>
+                    </Row>
+                </Container>
+            </article>
+        </>
     );
 }
 

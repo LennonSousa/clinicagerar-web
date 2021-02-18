@@ -29,7 +29,7 @@ header {
 
 .top {
     bottom: inherit;
-    top: -50px;
+    top: -49px;
 }
 
 .header-img-bottom-reverse-front {
@@ -89,20 +89,26 @@ header {
 }
 
 .middle-section {
-    height: 500px;
+    height: 100%;
+}
+
+.col-mark {
+    text-align: left;
+}
+
+.services-article {
+    height: 100%;
 }
 
 @media (max-width: 768px) {
     header {
         height: 400px;
     }
-
-    .top {
-        top: 38px;
-    }
-
     .header-carousel-col {
         height: 400px;
+    }
+    .col-mark {
+        text-align: center;
     }
 }
 
@@ -110,7 +116,6 @@ header {
     header {
         height: 700px;
     }
-
     .header-carousel-col {
         height: 700px;
     }

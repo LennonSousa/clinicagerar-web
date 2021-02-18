@@ -14,11 +14,15 @@ body, input, button, textarea {
 
 h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 50px;
+    font-size: 62px;
     color: #003A3C;
 }
 
-button {
+.section-top {
+    margin-top: 2rem;
+}
+
+.button-standard {
     background-color: #003A3C;
     color: #ffffff;
     height: 38px;
@@ -28,12 +32,12 @@ button {
     padding: .375rem .75rem;
     font-size: 1rem;
     border-radius: .25rem;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition-duration: 0.4s;
 }
 
-button :hover {
-    background-color: #ffca2c;
-    border-color: #ffc720;
+.button-standard:hover {
+    background-color: #195d5f;
+    border-color: #195d5f;
 }
 
 .title-light {
