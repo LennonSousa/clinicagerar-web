@@ -1,21 +1,25 @@
-.nav-container {
-    width: 100%;
-    background-color: rgba(0, 58, 60, 0.8);
-    position: absolute;
-    top: 0;
-    z-index: 2;
+.nav-container-top {
+    background-color: #003A3C;
+}
+
+.nav-container-bottom {
+    transition-duration: 0.4s;
+}
+
+.nav-brand-bottom {
+    transition-duration: 0.4s;
 }
 
 .nav-header-link {
     font-weight: 200;
     margin: 0 25px 0 25px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .nav-header-link-active {
     font-weight: 200;
     margin: 0 25px 0 25px;
-    font-size: 18px;
+    font-size: 16px;
     border-bottom: #F97352 5px solid;
 }
 

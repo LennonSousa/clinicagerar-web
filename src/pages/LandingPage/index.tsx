@@ -28,8 +28,9 @@ function LandingPage() {
 
     return (
         <>
+            <PageHeader />
             <header>
-                <PageHeader />
+
                 <Carousel indicators={true} nextLabel="" prevLabel="" interval={5000} fade={true}>
                     <Carousel.Item style={{ backgroundColor: '#003A3C' }}>
                         <div className="header-carousel-col" style={{ backgroundImage: `url(${ImageSlide01})` }}>
