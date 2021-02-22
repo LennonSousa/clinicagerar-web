@@ -6,7 +6,7 @@ import './styles.css';
 import logoImg from '../../assets/images/logo-horizontal-branco.svg';
 
 function PageHeader() {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
 
     const navbarControl = () => {
         if (window.scrollY > 300) {
@@ -39,7 +39,7 @@ function PageHeader() {
             <Navbar className="nav-container-bottom"
                 style={{
                     backgroundColor: show ? 'rgba(0, 58, 60, 1)' : 'rgba(0, 58, 60, 0.8)',
-                    boxShadow: show ? 'none' : 'rgb(0 0 0 / 31%) 0px 4px 8px 2px'
+                    boxShadow: show ? 'none' : 'rgb(0 0 0 / 31%) 0px 4px 11px 2px'
                 }}
                 variant="dark"
                 expand="lg"
@@ -48,7 +48,7 @@ function PageHeader() {
                 <Container>
                     <Navbar.Brand href="#home">
                         <img
-                            style={{ opacity: !show ? 1 : 0 }}
+                            style={{ opacity: show ? 0 : 1 }}
                             src={logoImg}
                             height="30"
                             className="align-top nav-brand-bottom"
