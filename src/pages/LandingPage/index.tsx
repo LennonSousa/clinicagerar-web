@@ -5,12 +5,13 @@ import ScrollReveal from 'scrollreveal';
 
 import PageHeader from '../../components/PageHeader';
 import OurService from '../../components/OurServices';
+import Members from '../../components/Members';
 
 import './styles.css'
 
 import imageDoctors from '../../assets/images/undraw_doctors_hwty.svg';
 
-import ImageSlide01 from '../../assets/images/slide-item-01.png';
+import ImageSlide01 from '../../assets/images/slide-item-01.jpg';
 import ImageSlide02 from '../../assets/images/slide-item-02.png';
 
 import carouselImgBottom from '../../assets/images/header-carousel-bottom.svg';
@@ -18,6 +19,10 @@ import carouselImgBottom from '../../assets/images/header-carousel-bottom.svg';
 import serviceMedicineFetal from '../../assets/images/service-medicine-fetal.jpg';
 import serviceHumanReproduction from '../../assets/images/service-human-reproduction.jpg';
 import serviceUltra from '../../assets/images/service-ultra.jpg';
+
+import teamArticleContainerTop from '../../assets/images/team-container-top.svg';
+import teamMember01 from '../../assets/images/team-01.jpg';
+import teamMember02 from '../../assets/images/team-02.jpg';
 
 function LandingPage() {
     useEffect(() => {
@@ -29,6 +34,7 @@ function LandingPage() {
     return (
         <>
             <PageHeader />
+
             <header>
 
                 <Carousel indicators={true} nextLabel="" prevLabel="" interval={5000} fade={true}>
@@ -137,6 +143,72 @@ function LandingPage() {
                                 title: 'Ultrassonografia',
                                 description: 'A ultrassonografia é uma técnica médica, não invasiva, utilizada para reproduzir imagens dinâmicas – observadas em tempo real - dos órgãos internos, tecidos, rede vascular e fluxo sanguíneo, auxiliando, complementando e interagindo com outras especialidades médicas.',
                                 image: serviceUltra
+                            }
+                        } />
+
+                        <OurService ourService={
+                            {
+                                id: 1,
+                                title: 'Reprodução humana',
+                                description: 'Técnica também conhecida como "bebê de proveta", a fertilização in vitro (FIV) é um processo em que a fertilização do óvulo com espermatozoide é feita em laboratório.',
+                                image: serviceHumanReproduction
+                            }
+                        } />
+
+                        <OurService ourService={
+                            {
+                                id: 2,
+                                title: 'Medicina fetal',
+                                description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
+                                image: serviceMedicineFetal
+                            }
+                        } />
+
+                        <OurService ourService={
+                            {
+                                id: 3,
+                                title: 'Ultrassonografia',
+                                description: 'A ultrassonografia é uma técnica médica, não invasiva, utilizada para reproduzir imagens dinâmicas – observadas em tempo real - dos órgãos internos, tecidos, rede vascular e fluxo sanguíneo, auxiliando, complementando e interagindo com outras especialidades médicas.',
+                                image: serviceUltra
+                            }
+                        } />
+                    </Row>
+                </Container>
+            </article>
+
+            <article className="section-top">
+                <Container>
+                    <Row>
+                        <div className="section-col-back block-with-text">
+                            <h1>Equipe</h1>
+                        </div>
+
+                        <Col className="section-col">
+                            <h1>Nossa Equipe</h1>
+                            <p className="title-dark">A equipe mais capacidada para lhe atender.</p>
+                        </Col>
+                    </Row>
+                </Container>
+            </article>
+
+            <article style={{ backgroundImage: `url(${teamArticleContainerTop})` }} className="team-article">
+                <Container>
+                    <Row className="justify-content-center">
+                        <Members member={
+                            {
+                                id: 1,
+                                title: 'Medicina fetal',
+                                description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
+                                image: teamMember01
+                            }
+                        } />
+
+                        <Members member={
+                            {
+                                id: 2,
+                                title: 'Medicina fetal',
+                                description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
+                                image: teamMember02
                             }
                         } />
                     </Row>

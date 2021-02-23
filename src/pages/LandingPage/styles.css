@@ -100,6 +100,13 @@ header {
     min-height: 500px;
 }
 
+.team-article{
+    background-repeat: repeat-x;
+    min-height: 600px;
+    background-size: cover;
+    background-position-y: top;
+}
+
 @media (max-width: 768px) {
     header {
         height: 400px;
@@ -114,9 +121,9 @@ header {
 
 @media (min-width: 1400px) {
     header {
-        height: 700px;
+        height: 550px;
     }
     .header-carousel-col {
-        height: 700px;
+        height: 550px;
     }
 }
