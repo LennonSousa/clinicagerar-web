@@ -38,7 +38,7 @@ h1 {
 
 .section-col-back {
     position: absolute;
-    max-width: 60%;
+    white-space: normal!important;
 }
 
 .section-col-back h1 {
@@ -81,10 +81,4 @@ h1 {
     font-weight: 400;
     font-size: 14px;
     color: #969696;
-}
-
-@media (max-width: 768px) {
-    .section-col-back {
-        max-width: 100%;
-    }
 }

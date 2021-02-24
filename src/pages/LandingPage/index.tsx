@@ -24,9 +24,13 @@ import teamArticleContainerTop from '../../assets/images/team-container-top.svg'
 import teamMember01 from '../../assets/images/team-01.jpg';
 import teamMember02 from '../../assets/images/team-02.jpg';
 
+import visitUsArticleContainerTop from '../../assets/images/visit-us-container-top.svg';
+
+import newsArticleImg from '../../assets/images/news-01.jpg';
+
 function LandingPage() {
     useEffect(() => {
-        ScrollReveal().reveal('.section-col-back h1', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
+        ScrollReveal().reveal('.section-col-back', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
         ScrollReveal().reveal('.image-doctors', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
         ScrollReveal().reveal('.col-mark', { delay: 500, duration: 1500 });
     }, []);
@@ -211,6 +215,62 @@ function LandingPage() {
                                 image: teamMember02
                             }
                         } />
+                    </Row>
+                </Container>
+            </article>
+
+            <article className="news-article pt-5 pb-5">
+                <Container>
+                    <Row className="justify-content-center align-items-center">
+                        <Col md={6}>
+                            <Row>
+                                <Col className="pt-3 pb-3">
+                                    <h1>Título do artigo</h1>
+                                </Col>
+                            </Row>
+
+                            <Row>
+                                <Col className="news-article-text pt-3 pb-3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </Col>
+                            </Row>
+                        </Col>
+                        <Col md={6}>
+                            <Image fluid src={newsArticleImg} className="news-article-image" />
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col className="news-article-button pt-4">
+                            <button className="button-standard" type="button">Saber mais</button>
+                        </Col>
+                    </Row>
+                </Container>
+            </article>
+
+            <article style={{ backgroundImage: `url(${visitUsArticleContainerTop})` }} className="visit-us-article">
+                <Container>
+                    <Row>
+                        <div className="section-col-back block-with-text">
+                            <h1>Venha nos conhecer</h1>
+                        </div>
+
+                        <Col className="section-col">
+                            <h1>Venha nos conhecer</h1>
+                            <p className="title-dark">Conheça um pouco mais a Clínica Gerar.</p>
+                        </Col>
+                    </Row>
+
+                    <Row className="justify-content-center">
+                        <Carousel className="visit-us-article-carousel" indicators={true} nextLabel="" prevLabel="" interval={5000} fade={true}>
+                            <Carousel.Item title="Nossa recepção">
+                                <Image fluid src={ImageSlide01} />
+                                <Carousel.Caption>
+                                    <h3>First slide label</h3>
+                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        </Carousel>
                     </Row>
                 </Container>
             </article>

@@ -16,7 +16,7 @@ interface MembersProps {
 
 const Members: React.FC<MembersProps> = ({ member }) => {
     return (
-        <Col className="member-container col-11 text-center" md={4} >
+        <Col className="member-container col-11 text-center" lg={4} >
             <div className="member-item pt-3 pb-3">
                 <Row className="member-image-row">
                     <Col className="member-image-col">
