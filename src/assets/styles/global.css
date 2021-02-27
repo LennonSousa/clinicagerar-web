@@ -38,7 +38,13 @@ h1 {
 
 .section-col-back {
     position: absolute;
+    max-width: 1320px;
     white-space: normal!important;
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .section-col-back h1 {
@@ -81,4 +87,34 @@ h1 {
     font-weight: 400;
     font-size: 14px;
     color: #969696;
+}
+
+@media (min-width: 1400px) {
+    .section-col-back {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .section-col-back {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .section-col-back {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px)  and (max-width: 991px) {
+    .section-col-back {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-col-back {
+        max-width: 540px;
+    }
 }

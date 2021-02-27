@@ -2,17 +2,22 @@ import React, { useEffect } from 'react';
 import { Container, Row, Col, Carousel, Image } from 'react-bootstrap';
 import { FaRegEnvelope, FaWhatsapp } from 'react-icons/fa'
 import ScrollReveal from 'scrollreveal';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import Leaflet from 'leaflet';
 
 import PageHeader from '../../components/PageHeader';
 import OurService from '../../components/OurServices';
 import Members from '../../components/Members';
 
+import 'leaflet/dist/leaflet.css';
 import './styles.css'
 
+import mapPin from '../../assets/images/map-pin.svg';
 import imageDoctors from '../../assets/images/undraw_doctors_hwty.svg';
 
 import ImageSlide01 from '../../assets/images/slide-item-01.jpg';
-import ImageSlide02 from '../../assets/images/slide-item-02.png';
+import ImageSlide02 from '../../assets/images/slide-item-02.jpg';
+import ImageSlide03 from '../../assets/images/slide-item-03.jpg';
 
 import carouselImgBottom from '../../assets/images/header-carousel-bottom.svg';
 
@@ -24,11 +29,20 @@ import teamArticleContainerTop from '../../assets/images/team-container-top.svg'
 import teamMember01 from '../../assets/images/team-01.jpg';
 import teamMember02 from '../../assets/images/team-02.jpg';
 
-import visitUsArticleContainerTop from '../../assets/images/visit-us-container-top.svg';
+import mapArticleContainerTop from '../../assets/images/visit-us-container-top.svg';
 
 import newsArticleImg from '../../assets/images/news-01.jpg';
 
+import visitUsArticleBackground from '../../assets/images/visit-us-background.jpg';
+
 function LandingPage() {
+    var mapIcon = Leaflet.icon({
+        iconUrl: mapPin,
+        iconSize: [38, 95],
+        iconAnchor: [22, 0],
+        popupAnchor: [-3, 0],
+    });
+
     useEffect(() => {
         ScrollReveal().reveal('.section-col-back', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
         ScrollReveal().reveal('.image-doctors', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
@@ -44,11 +58,64 @@ function LandingPage() {
                 <Carousel indicators={true} nextLabel="" prevLabel="" interval={5000} fade={true}>
                     <Carousel.Item style={{ backgroundColor: '#003A3C' }}>
                         <div className="header-carousel-col" style={{ backgroundImage: `url(${ImageSlide01})` }}>
+                            <Container className="header-carousel-caption-container">
+                                <Row className="header-carousel-caption-row justify-content-center align-items-center text-center">
+                                    <Col className="col-10" sm={8}>
+                                        <div style={{backgroundColor: `${'#003A3C'}85`}} className="header-carousel-caption-content">
+                                            <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
+                                                <Col sm={10}>
+                                                    <h1 className="visit-us-title-h1">First slide label</h1>
+                                                </Col>
+                                                <Col sm={10}>
+                                                    <p className="header-carousel-caption-content-p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
                         </div>
                     </Carousel.Item>
 
-                    <Carousel.Item style={{ backgroundColor: '#F97352' }}>
+                    <Carousel.Item style={{ backgroundColor: '#003A3C' }}>
                         <div className="header-carousel-col" style={{ backgroundImage: `url(${ImageSlide02})` }}>
+                            <Container className="header-carousel-caption-container">
+                                <Row className="header-carousel-caption-row justify-content-center align-items-center text-center">
+                                    <Col className="col-10" sm={8}>
+                                        <div style={{backgroundColor: `${'#f97352'}85`}} className="header-carousel-caption-content">
+                                            <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
+                                                <Col sm={10}>
+                                                    <h1 className="visit-us-title-h1">First slide label</h1>
+                                                </Col>
+                                                <Col sm={10}>
+                                                    <p className="header-carousel-caption-content-p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                    </Carousel.Item>
+
+                    <Carousel.Item style={{ backgroundColor: '#003A3C' }}>
+                        <div className="header-carousel-col" style={{ backgroundImage: `url(${ImageSlide03})` }}>
+                            <Container className="header-carousel-caption-container">
+                                <Row className="header-carousel-caption-row justify-content-center align-items-center text-center">
+                                    <Col className="col-10" sm={8}>
+                                        <div style={{backgroundColor: `${'#003A3C'}85`}} className="header-carousel-caption-content">
+                                            <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
+                                                <Col sm={10}>
+                                                    <h1 className="visit-us-title-h1">First slide label</h1>
+                                                </Col>
+                                                <Col sm={10}>
+                                                    <p className="header-carousel-caption-content-p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
                         </div>
                     </Carousel.Item>
                 </Carousel>
@@ -248,31 +315,62 @@ function LandingPage() {
                 </Container>
             </article>
 
-            <article style={{ backgroundImage: `url(${visitUsArticleContainerTop})` }} className="visit-us-article">
+            <article style={{ backgroundImage: `url(${mapArticleContainerTop})` }} className="map-article pt-5 pb-5">
                 <Container>
                     <Row>
                         <div className="section-col-back block-with-text">
-                            <h1>Venha nos conhecer</h1>
+                            <h1>Nossa localização</h1>
                         </div>
 
                         <Col className="section-col">
-                            <h1>Venha nos conhecer</h1>
-                            <p className="title-dark">Conheça um pouco mais a Clínica Gerar.</p>
+                            <h1>Nossa localização</h1>
+                            <p className="title-dark">Venha nos fazer uma visita.</p>
                         </Col>
                     </Row>
 
-                    <Row className="justify-content-center">
-                        <Carousel className="visit-us-article-carousel" indicators={true} nextLabel="" prevLabel="" interval={5000} fade={true}>
-                            <Carousel.Item title="Nossa recepção">
-                                <Image fluid src={ImageSlide01} />
-                                <Carousel.Caption>
-                                    <h3>First slide label</h3>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                        </Carousel>
+                    <Row className="map-row justify-content-center">
+                        <MapContainer center={[-5.5083466, -47.4738385]} zoom={17} scrollWheelZoom={false} >
+                            <TileLayer
+                                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            />
+                            <Marker icon={mapIcon} position={[-5.5083466, -47.4738385]}>
+                                <Popup>
+                                    A pretty CSS3 popup. <br /> Easily customizable.
+                                </Popup>
+                            </Marker>
+                        </MapContainer>
                     </Row>
                 </Container>
+            </article>
+
+            <article className="visit-us-article pt-5 pb-5">
+                <div style={{ backgroundImage: `url(${visitUsArticleBackground})` }} className="visit-us-container-background mt-5 pb-5" >
+                    <Container>
+                        <Row>
+                            <div className="section-col-back block-with-text">
+                                <h1 className="visit-us-title-back-h1">Venha nos conhecer</h1>
+                            </div>
+
+                            <Col className="section-col">
+                                <h1 className="visit-us-title-h1">Venha nos conhecer</h1>
+                                <p className="title-dark">Conheça um pouco mais a Clínica Gerar.</p>
+                            </Col>
+                        </Row>
+
+                        <Row className="justify-content-center">
+                            <Carousel className="visit-us-article-carousel" indicators={true} nextLabel="" prevLabel="" interval={5000} fade={true}>
+                                <Carousel.Item title="Nossa recepção">
+                                    <Image fluid src={ImageSlide01} />
+                                    <Carousel.Caption>
+                                        <h3>First slide label</h3>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                            </Carousel>
+                        </Row>
+                    </Container>
+                </div>
             </article>
         </>
     );
