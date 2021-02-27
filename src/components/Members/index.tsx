@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Image } from 'react-bootstrap';
+import { FaUserMd } from 'react-icons/fa';
 
 import './styles.css'
 
@@ -33,7 +34,7 @@ const Members: React.FC<MembersProps> = ({ member }) => {
 
                 <Row className="member-button-row">
                     <Col>
-                        <button className="button-standard" type="button">Agendar por e-mail</button>
+                        <button className="button-standard" type="button">Conhecer mais <FaUserMd size={20} /></button>
                     </Col>
                 </Row>
             </div>

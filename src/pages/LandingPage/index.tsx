@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Carousel, Image } from 'react-bootstrap';
-import { FaRegEnvelope, FaWhatsapp } from 'react-icons/fa'
+import { FaRegEnvelope, FaWhatsapp } from 'react-icons/fa';
 import ScrollReveal from 'scrollreveal';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Leaflet from 'leaflet';
@@ -8,6 +8,7 @@ import Leaflet from 'leaflet';
 import PageHeader from '../../components/PageHeader';
 import OurService from '../../components/OurServices';
 import Members from '../../components/Members';
+import Footer from '../../components/Footer';
 
 import 'leaflet/dist/leaflet.css';
 import './styles.css'
@@ -21,9 +22,12 @@ import ImageSlide03 from '../../assets/images/slide-item-03.jpg';
 
 import carouselImgBottom from '../../assets/images/header-carousel-bottom.svg';
 
-import serviceMedicineFetal from '../../assets/images/service-medicine-fetal.jpg';
-import serviceHumanReproduction from '../../assets/images/service-human-reproduction.jpg';
-import serviceUltra from '../../assets/images/service-ultra.jpg';
+import service01Icon from '../../assets/images/service-01-icon.svg';
+import service02Icon from '../../assets/images/service-02-icon.svg';
+import service03Icon from '../../assets/images/service-03-icon.svg';
+import service04Icon from '../../assets/images/service-04-icon.svg';
+import service05Icon from '../../assets/images/service-05-icon.svg';
+import service06Icon from '../../assets/images/service-06-icon.svg';
 
 import teamArticleContainerTop from '../../assets/images/team-container-top.svg';
 import teamMember01 from '../../assets/images/team-01.jpg';
@@ -64,7 +68,7 @@ function LandingPage() {
                                         <div style={{backgroundColor: `${'#003A3C'}85`}} className="header-carousel-caption-content">
                                             <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
                                                 <Col sm={10}>
-                                                    <h1 className="visit-us-title-h1">First slide label</h1>
+                                                    <h1 className="visit-us-title-h1">Título do primeiro slide</h1>
                                                 </Col>
                                                 <Col sm={10}>
                                                     <p className="header-carousel-caption-content-p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -85,7 +89,7 @@ function LandingPage() {
                                         <div style={{backgroundColor: `${'#f97352'}85`}} className="header-carousel-caption-content">
                                             <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
                                                 <Col sm={10}>
-                                                    <h1 className="visit-us-title-h1">First slide label</h1>
+                                                    <h1 className="visit-us-title-h1">Título do segundo slide</h1>
                                                 </Col>
                                                 <Col sm={10}>
                                                     <p className="header-carousel-caption-content-p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -106,7 +110,7 @@ function LandingPage() {
                                         <div style={{backgroundColor: `${'#003A3C'}85`}} className="header-carousel-caption-content">
                                             <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
                                                 <Col sm={10}>
-                                                    <h1 className="visit-us-title-h1">First slide label</h1>
+                                                    <h1 className="visit-us-title-h1">Título do terceiro slide</h1>
                                                 </Col>
                                                 <Col sm={10}>
                                                     <p className="header-carousel-caption-content-p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -193,18 +197,18 @@ function LandingPage() {
                         <OurService ourService={
                             {
                                 id: 1,
-                                title: 'Reprodução humana',
+                                title: 'Ginecologia',
                                 description: 'Técnica também conhecida como "bebê de proveta", a fertilização in vitro (FIV) é um processo em que a fertilização do óvulo com espermatozoide é feita em laboratório.',
-                                image: serviceHumanReproduction
+                                image: service02Icon
                             }
                         } />
 
                         <OurService ourService={
                             {
                                 id: 2,
-                                title: 'Medicina fetal',
+                                title: 'Obstetrícia',
                                 description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
-                                image: serviceMedicineFetal
+                                image: service03Icon
                             }
                         } />
 
@@ -213,34 +217,34 @@ function LandingPage() {
                                 id: 3,
                                 title: 'Ultrassonografia',
                                 description: 'A ultrassonografia é uma técnica médica, não invasiva, utilizada para reproduzir imagens dinâmicas – observadas em tempo real - dos órgãos internos, tecidos, rede vascular e fluxo sanguíneo, auxiliando, complementando e interagindo com outras especialidades médicas.',
-                                image: serviceUltra
+                                image: service01Icon
                             }
                         } />
 
                         <OurService ourService={
                             {
                                 id: 1,
-                                title: 'Reprodução humana',
+                                title: 'Medicina fetal',
                                 description: 'Técnica também conhecida como "bebê de proveta", a fertilização in vitro (FIV) é um processo em que a fertilização do óvulo com espermatozoide é feita em laboratório.',
-                                image: serviceHumanReproduction
+                                image: service04Icon
                             }
                         } />
 
                         <OurService ourService={
                             {
                                 id: 2,
-                                title: 'Medicina fetal',
+                                title: 'Reprodução humana',
                                 description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
-                                image: serviceMedicineFetal
+                                image: service05Icon
                             }
                         } />
 
                         <OurService ourService={
                             {
                                 id: 3,
-                                title: 'Ultrassonografia',
+                                title: 'Cirurgia plástica',
                                 description: 'A ultrassonografia é uma técnica médica, não invasiva, utilizada para reproduzir imagens dinâmicas – observadas em tempo real - dos órgãos internos, tecidos, rede vascular e fluxo sanguíneo, auxiliando, complementando e interagindo com outras especialidades médicas.',
-                                image: serviceUltra
+                                image: service06Icon
                             }
                         } />
                     </Row>
@@ -372,6 +376,8 @@ function LandingPage() {
                     </Container>
                 </div>
             </article>
+
+            <Footer />
         </>
     );
 }

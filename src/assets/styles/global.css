@@ -89,6 +89,10 @@ h1 {
     color: #969696;
 }
 
+footer {
+    height: 350px;
+}
+
 @media (min-width: 1400px) {
     .section-col-back {
         max-width: 1320px;

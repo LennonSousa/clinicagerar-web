@@ -59,9 +59,9 @@ function PageHeader() {
                     <Navbar.Collapse className="justify-content-center" id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <Link to="/" className="nav-link nav-header-link-active">INÍCIO</Link>
-                            <Link to="/menu/categories" className="nav-link nav-header-link">SOBRE NÓS</Link>
-                            <Link to="/restaurant" className="nav-link nav-header-link">AGENDAMENTO</Link>
-                            <Link to="/ordering" className="nav-link nav-header-link">CONTATO</Link>
+                            <Link to="/" className="nav-link nav-header-link">SOBRE NÓS</Link>
+                            <Link to="/" className="nav-link nav-header-link">AGENDAMENTO</Link>
+                            <Link to="/" className="nav-link nav-header-link">CONTATO</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

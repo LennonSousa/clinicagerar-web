@@ -1,5 +1,9 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Row, Col, Image } from 'react-bootstrap';
+import { FaAngleRight } from 'react-icons/fa';
+
+import ourServicesBackground from '../../assets/images/our-services-background.svg';
 
 import './styles.css'
 
@@ -16,22 +20,25 @@ interface OurServicesProps {
 
 const OurServices: React.FC<OurServicesProps> = ({ ourService }) => {
     return (
-        <Col className="service-col col-11" sm={4} >
-            <div className="service-image" style={{ backgroundImage: `url(${ourService.image})` }} >
-                <div className="service-row-title justify-content-center">
-                    <div className="service-col-title">
-                        <h3>{ourService.title}</h3>
-                    </div>
-                </div>
-
-                <div className="service-overlap">
-                    <Row className="service-overlap-row">
-                        <Col>
-                            <p>{ourService.description}</p>
+        <Col className="service-col col-11 mt-3 mb-3" md={6} lg={3} >
+            <div className="service-container">
+                <div className="service-container-background"></div>
+                <div className="service-container-background-hidden"></div>
+                <div className="service-content" style={{ backgroundImage: `url(${ourServicesBackground})` }} >
+                    <Row className="service-content-row justify-content-center align-items-center">
+                        <Col sm={6}>
+                            <Image className="service-content-icon" src={ourService.image} alt={ourService.title} fluid />
+                        </Col>
+                        <Col sm={10}>
+                            <h3 className="service-content-title">{ourService.title}</h3>
+                        </Col>
+                        <Col sm={10}>
+                            <Link to="/" className="service-content-more nav-link">Saber mais <FaAngleRight size={20} /></Link>
                         </Col>
                     </Row>
                 </div>
             </div>
+
         </Col>
     )
 }
