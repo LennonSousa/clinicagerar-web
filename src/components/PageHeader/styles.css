@@ -7,6 +7,7 @@
 }
 
 .nav-brand-bottom {
+    position: absolute;
     transition-duration: 0.4s;
 }
 
@@ -16,6 +17,26 @@
     font-size: 16px;
 }
 
+.nav-top-container {
+    border-bottom: 1px solid;
+    border-bottom-color: #0a484a;
+    padding-bottom: 1rem;
+    justify-content: center !important;
+}
+
+.nav-contact-container-link {
+    margin: 0 25px 0 25px;
+    font-size: 14px;
+}
+
+.nav-contact-container-text {
+    font-weight: 200;
+    margin: 0 25px 0 25px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
 .nav-header-link-active {
     font-weight: 200;
     margin: 0 25px 0 25px;
@@ -23,8 +44,32 @@
     border-bottom: #F97352 5px solid;
 }
 
+.nav-bottom-container {
+    width: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-bottom-links-container {
+    width: 100%;
+    display: none;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .nav-container {
         background-color: rgba(0, 58, 60, 1);
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-top-container {
+        display: none;
+    }
+    .nav-bottom-container {
+        width: 100%;
+    }
+    .nav-bottom-links-container {
+        display: flex;
     }
 }
