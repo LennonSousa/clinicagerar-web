@@ -39,11 +39,13 @@ import newsArticleImg from '../../assets/images/news-01.jpg';
 
 import visitUsArticleBackground from '../../assets/images/visit-us-background.jpg';
 
+require('dotenv/config');
+
 function LandingPage() {
     var mapIcon = Leaflet.icon({
         iconUrl: mapPin,
         iconSize: [38, 95],
-        iconAnchor: [22, 0],
+        iconAnchor: [30, 30],
         popupAnchor: [-3, 0],
     });
 
@@ -334,12 +336,11 @@ function LandingPage() {
                     </Row>
 
                     <Row className="map-row justify-content-center">
-                        <MapContainer center={[-5.5114917, -47.4775552]} zoom={17} scrollWheelZoom={false} >
+                        <MapContainer center={[-5.508016025826771, -47.473843817431266]} zoom={17} tap={false} dragging={false} scrollWheelZoom={false} >
                             <TileLayer
-                                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                url={`https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
                             />
-                            <Marker icon={mapIcon} position={[-5.5114917, -47.4775552]}>
+                            <Marker icon={mapIcon} position={[-5.508016025826771, -47.473843817431266]}>
                                 <Popup>
                                     <div><h6>Av. Bernardo Sayão, 3650</h6></div>
                                     <div><h6>Medical Center, 5º andar</h6></div>

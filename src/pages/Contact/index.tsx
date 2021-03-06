@@ -15,6 +15,8 @@ import errorMessageImage from '../../assets/images/undraw_page_not_found_su7k.sv
 
 import './styles.css';
 
+require('dotenv/config');
+
 const validationSchema = Yup.object().shape({
     name: Yup.string().required('Obrigatório!'),
     email: Yup.string().email('E-mail inválido').required('Obrigatório!'),
@@ -45,7 +47,7 @@ function Contact() {
                         </Col>
                     </Row>
 
-                    <Row className="mt-5 mb-5">
+                    <Row className="mb-5">
                         <Col className="mt-5" sm={4}>
                             <div className="contact-item-div">
                                 <Row className="justify-content-center align-items-center" style={{ height: '100%' }}>
@@ -54,7 +56,7 @@ function Contact() {
                                             <Col><FaMapSigns size={28} /></Col>
                                         </Row>
                                         <Row className="pt-4">
-                                            <Col><h2>Nosso endereço</h2></Col>
+                                            <Col><h3>Nosso endereço</h3></Col>
                                         </Row>
                                         <Row className="pt-4">
                                             <Col>
@@ -79,7 +81,7 @@ function Contact() {
                                             <Col><FaPhoneAlt size={28} /></Col>
                                         </Row>
                                         <Row className="pt-4">
-                                            <Col><h2>Nossos telefones</h2></Col>
+                                            <Col><h3>Nossos telefones</h3></Col>
                                         </Row>
                                         <Row className="pt-4">
                                             <Col>
@@ -103,7 +105,7 @@ function Contact() {
                                             <Col><FaRegEnvelope size={28} /></Col>
                                         </Row>
                                         <Row className="pt-4">
-                                            <Col><h2>Nossos e-mails</h2></Col>
+                                            <Col><h3>Nossos e-mails</h3></Col>
                                         </Row>
                                         <Row className="pt-4">
                                             <Col>
@@ -122,8 +124,13 @@ function Contact() {
             <section className="mt-5 mb-5">
                 <Container>
                     <Row>
-                        <Col><h2 className="article-title">Você também pode enviar um e-mail por aqui mesmo. Preencha o formulário abaixo e envia a mensagem.</h2></Col>
+                        <Col><h2 className="article-title">Você também pode enviar um e-mail por aqui mesmo.</h2></Col>
                     </Row>
+
+                    <Row className="mb-4">
+                        <Col><h5>Preencha o formulário abaixo e envie a mensagem.</h5></Col>
+                    </Row>
+
                     <Row>
                         <Col>
                             <Formik
@@ -135,8 +142,6 @@ function Contact() {
                                 }}
                                 onSubmit={async values => {
                                     setIsSendingMessage(true);
-
-                                    console.log(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, process.env.REACT_APP_USER_ID);
 
                                     try {
                                         if (process.env.REACT_APP_SERVICE_ID &&
