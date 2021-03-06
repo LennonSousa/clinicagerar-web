@@ -7,7 +7,11 @@ import './styles.css';
 import logoImg from '../../assets/images/logo-horizontal-branco.svg';
 import scheduleImage from '../../assets/images/undraw_Work_time_re_hdyv.svg';
 
-function PageHeader() {
+interface PageHeaderProps {
+    activeLink?: "home" | "about" | "schedule" | "contact";
+}
+
+const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
     const [show, setShow] = useState(true);
 
     const [showModalSchedule, setShowModalSchedule] = useState(false);
@@ -32,7 +36,7 @@ function PageHeader() {
         <>
             <Navbar className="nav-container-top" variant="dark" expand="lg">
                 <Container className="nav-top-container">
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/">
                         <img
                             src={logoImg}
                             height="60"
@@ -93,7 +97,7 @@ function PageHeader() {
                 sticky="top"
             >
                 <Container>
-                    <Navbar.Brand href="#home" className="nav-brand-bottom" style={{ top: show ? "-100%" : 10 }}>
+                    <Navbar.Brand href="/" className="nav-brand-bottom" style={{ top: show ? "-100%" : 10 }}>
                         <img
                             style={{ opacity: show ? 0 : 1 }}
                             src={logoImg}
@@ -109,10 +113,10 @@ function PageHeader() {
 
                     <Navbar.Collapse className="justify-content-center" id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Link to="/" className="nav-link nav-header-link-active">INÍCIO</Link>
-                            <Link to="/" className="nav-link nav-header-link">SOBRE NÓS</Link>
-                            <Link to="/" className="nav-link nav-header-link">AGENDAMENTO</Link>
-                            <Link to="/" className="nav-link nav-header-link">CONTATO</Link>
+                            <Link to="/" className={`nav-link ${activeLink === "home" ? 'nav-header-link-active' : 'nav-header-link'}`}>INÍCIO</Link>
+                            <Link to="/about" className={`nav-link ${activeLink === "about" ? 'nav-header-link-active' : 'nav-header-link'}`}>SOBRE NÓS</Link>
+                            <Link to="/" className={`nav-link ${activeLink === "schedule" ? 'nav-header-link-active' : 'nav-header-link'}`}>AGENDAMENTO</Link>
+                            <Link to="/" className={`nav-link ${activeLink === "contact" ? 'nav-header-link-active' : 'nav-header-link'}`}>CONTATO</Link>
 
                             <div className="nav-bottom-links-container">
                                 <Row>

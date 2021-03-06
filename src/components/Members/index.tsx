@@ -27,7 +27,7 @@ const Members: React.FC<MembersProps> = ({ member }) => {
 
                 <Row className="member-description-row pt-3 pb-3">
                     <Col>
-                        <h3 className="member-title">Nome do médico</h3>
+                        <h3 className="member-title">{member.title}</h3>
                         <h6 className="member-sub-title">Especialidade do médido.</h6>
                     </Col>
                 </Row>

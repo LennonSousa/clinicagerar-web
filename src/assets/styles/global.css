@@ -18,6 +18,16 @@ h1 {
     color: #003A3C;
 }
 
+.article-title{
+    font: 400 2rem Nunito, sans-serif;
+    color: #DAA7A6;
+}
+
+.article-text{
+    font: 400 1rem Nunito, sans-serif;
+    color: #757575;
+}
+
 /* styles for '...' */
 
 .block-with-text {

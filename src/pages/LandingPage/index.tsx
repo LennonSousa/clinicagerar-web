@@ -48,14 +48,15 @@ function LandingPage() {
     });
 
     useEffect(() => {
-        ScrollReveal().reveal('.section-col-back', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
+        ScrollReveal().reveal('.section-col-back', { delay: 600, duration: 1000, origin: 'left', distance: '50%' });
+        ScrollReveal().reveal('.section-col', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
         ScrollReveal().reveal('.image-doctors', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
         ScrollReveal().reveal('.col-mark', { delay: 500, duration: 1500 });
     }, []);
 
     return (
         <>
-            <PageHeader />
+            <PageHeader activeLink="home" />
 
             <header>
 
@@ -65,7 +66,7 @@ function LandingPage() {
                             <Container className="header-carousel-caption-container">
                                 <Row className="header-carousel-caption-row justify-content-center align-items-center text-center">
                                     <Col className="col-10" sm={8}>
-                                        <div style={{backgroundColor: `${'#003A3C'}85`}} className="header-carousel-caption-content">
+                                        <div style={{ backgroundColor: `${'#003A3C'}85` }} className="header-carousel-caption-content">
                                             <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
                                                 <Col sm={10}>
                                                     <h1 className="visit-us-title-h1">Título do primeiro slide</h1>
@@ -86,7 +87,7 @@ function LandingPage() {
                             <Container className="header-carousel-caption-container">
                                 <Row className="header-carousel-caption-row justify-content-center align-items-center text-center">
                                     <Col className="col-10" sm={8}>
-                                        <div style={{backgroundColor: `${'#f97352'}85`}} className="header-carousel-caption-content">
+                                        <div style={{ backgroundColor: `${'#f97352'}85` }} className="header-carousel-caption-content">
                                             <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
                                                 <Col sm={10}>
                                                     <h1 className="visit-us-title-h1">Título do segundo slide</h1>
@@ -107,7 +108,7 @@ function LandingPage() {
                             <Container className="header-carousel-caption-container">
                                 <Row className="header-carousel-caption-row justify-content-center align-items-center text-center">
                                     <Col className="col-10" sm={8}>
-                                        <div style={{backgroundColor: `${'#003A3C'}85`}} className="header-carousel-caption-content">
+                                        <div style={{ backgroundColor: `${'#003A3C'}85` }} className="header-carousel-caption-content">
                                             <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
                                                 <Col sm={10}>
                                                     <h1 className="visit-us-title-h1">Título do terceiro slide</h1>
@@ -272,7 +273,7 @@ function LandingPage() {
                         <Members member={
                             {
                                 id: 1,
-                                title: 'Medicina fetal',
+                                title: 'Dr. Evaldo Reis Silva',
                                 description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
                                 image: teamMember01
                             }
@@ -333,14 +334,18 @@ function LandingPage() {
                     </Row>
 
                     <Row className="map-row justify-content-center">
-                        <MapContainer center={[-5.5083466, -47.4738385]} zoom={17} scrollWheelZoom={false} >
+                        <MapContainer center={[-5.5114917, -47.4775552]} zoom={17} scrollWheelZoom={false} >
                             <TileLayer
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
-                            <Marker icon={mapIcon} position={[-5.5083466, -47.4738385]}>
+                            <Marker icon={mapIcon} position={[-5.5114917, -47.4775552]}>
                                 <Popup>
-                                    A pretty CSS3 popup. <br /> Easily customizable.
+                                    <div><h6>Av. Bernardo Sayão, 3650</h6></div>
+                                    <div><h6>Medical Center, 5º andar</h6></div>
+                                    <div><h6>Bairro Três Poderes</h6></div>
+                                    <div><h6>Imperatriz - MA</h6></div>
+                                    <div><h6>65903-075</h6></div>
                                 </Popup>
                             </Marker>
                         </MapContainer>
