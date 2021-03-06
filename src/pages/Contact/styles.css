@@ -1,0 +1,23 @@
+.contact-item-div{
+    width: 100%;
+    height: 300px;
+    background-color: #003A3C;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-item-div h2 {
+    font-weight: 600;
+    color: #fff;
+}
+
+.contact-item-div p {
+    font-weight: 200;
+    color: #d2d2d2 !important;
+    font-size: 1rem;
+    line-height: 5px;
+}
+
+@media (max-width: 768px) {
+}

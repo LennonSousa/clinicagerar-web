@@ -282,7 +282,7 @@ function LandingPage() {
                         <Members member={
                             {
                                 id: 2,
-                                title: 'Medicina fetal',
+                                title: 'Dra. Cristina Célia Andrade',
                                 description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
                                 image: teamMember02
                             }

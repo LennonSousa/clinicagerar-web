@@ -115,8 +115,8 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                         <Nav className="mr-auto">
                             <Link to="/" className={`nav-link ${activeLink === "home" ? 'nav-header-link-active' : 'nav-header-link'}`}>INÍCIO</Link>
                             <Link to="/about" className={`nav-link ${activeLink === "about" ? 'nav-header-link-active' : 'nav-header-link'}`}>SOBRE NÓS</Link>
-                            <Link to="/" className={`nav-link ${activeLink === "schedule" ? 'nav-header-link-active' : 'nav-header-link'}`}>AGENDAMENTO</Link>
-                            <Link to="/" className={`nav-link ${activeLink === "contact" ? 'nav-header-link-active' : 'nav-header-link'}`}>CONTATO</Link>
+                            <Link to="/schedule" className={`nav-link ${activeLink === "schedule" ? 'nav-header-link-active' : 'nav-header-link'}`}>AGENDAMENTO</Link>
+                            <Link to="/contact" className={`nav-link ${activeLink === "contact" ? 'nav-header-link-active' : 'nav-header-link'}`}>CONTATO</Link>
 
                             <div className="nav-bottom-links-container">
                                 <Row>
@@ -170,7 +170,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                             <Image fluid src={scheduleImage} alt="Horário de funcionamento" />
                         </Col>
 
-                        <Col sm={5}>
+                        <Col className="mt-5" sm={5}>
                             <Row className="mb-2">
                                 <Col>
                                     <h5 style={{ color: "#003A3C", fontWeight: 600 }}>De segunda a sexta.</h5>

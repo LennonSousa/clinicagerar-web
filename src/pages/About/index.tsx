@@ -1,53 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import ScrollReveal from 'scrollreveal';
 
 import PageHeader from '../../components/PageHeader';
+import PageTop from '../../components/PageTop';
 import Footer from '../../components/Footer';
 
-import 'leaflet/dist/leaflet.css';
+import headerImage from '../../assets/images/capa-sobre.jpg';
+
 import './styles.css'
 
-import headerImage from '../../assets/images/capa-sobre.jpg'
-
 function About() {
-    useEffect(() => {
-        ScrollReveal().reveal('.section-col-back', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
-        ScrollReveal().reveal('.about-header-col', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
-    }, []);
 
     return (
         <>
             <PageHeader activeLink="about" />
 
-            <header className="about-header" style={{ backgroundImage: `url(${headerImage})` }}>
-                <Container style={{ height: '100%' }}>
-                    <Row style={{ height: '100%', alignItems: 'flex-end' }}>
-                        <Col>
-                            <div className="about-header-div">
-                                <Row>
-                                    <div className="section-col-back block-with-text">
-                                        <h1 className="about-header-back-h1">Sobre nós</h1>
-                                    </div>
-                                    <Col className="about-header-col">
-                                        <h1 className="about-header-h1">Sobre nós</h1>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </header>
-
-            <section>
-                <Container>
-                    <Row className="mb-5">
-                        <Col>
-                            <div className="about-article-div"></div>
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
+            <PageTop backgroundImage={headerImage} title="Sobre nós" />
 
             <article>
                 <Container>

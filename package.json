@@ -11,7 +11,10 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "bootstrap": "^5.0.0-beta2",
+    "emailjs-com": "^2.6.4",
+    "formik": "^2.2.6",
     "leaflet": "^1.7.1",
+    "nodemailer": "^6.5.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
@@ -21,10 +24,11 @@
     "react-scripts": "4.0.2",
     "scrollreveal": "^4.0.7",
     "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "node server",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -51,6 +55,7 @@
   "devDependencies": {
     "@types/bootstrap": "^5.0.5",
     "@types/leaflet": "^1.5.23",
+    "@types/nodemailer": "^6.4.0",
     "@types/react-leaflet": "^2.5.2",
     "@types/react-router-dom": "^5.1.7",
     "@types/scrollreveal": "^0.0.6"
