@@ -10,6 +10,9 @@ import OurService from '../../components/OurServices';
 import Members from '../../components/Members';
 import Footer from '../../components/Footer';
 
+// Datas
+import membersList from '../../data/members';
+
 import 'leaflet/dist/leaflet.css';
 import './styles.css'
 
@@ -30,8 +33,6 @@ import service05Icon from '../../assets/images/service-05-icon.svg';
 import service06Icon from '../../assets/images/service-06-icon.svg';
 
 import teamArticleContainerTop from '../../assets/images/team-container-top.svg';
-import teamMember01 from '../../assets/images/team-01.jpg';
-import teamMember02 from '../../assets/images/team-02.jpg';
 
 import mapArticleContainerTop from '../../assets/images/visit-us-container-top.svg';
 
@@ -272,23 +273,11 @@ function LandingPage() {
             <article style={{ backgroundImage: `url(${teamArticleContainerTop})` }} className="team-article">
                 <Container>
                     <Row className="justify-content-center">
-                        <Members member={
-                            {
-                                id: 1,
-                                title: 'Dr. Evaldo Reis Silva',
-                                description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
-                                image: teamMember01
-                            }
-                        } />
-
-                        <Members member={
-                            {
-                                id: 2,
-                                title: 'Dra. Cristina Célia Andrade',
-                                description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
-                                image: teamMember02
-                            }
-                        } />
+                        {
+                            membersList.map((member, index) => {
+                                return <Members key={index} member={member} />
+                            })
+                        }
                     </Row>
                 </Container>
             </article>

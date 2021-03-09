@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Row, Col, Image } from 'react-bootstrap';
 import { FaUserMd } from 'react-icons/fa';
 
-import './styles.css'
+import './styles.css';
 
 export interface Member {
     id: number;
     title: string;
     description: string;
     image: string;
+    cover: string;
+    url: string;
 }
 
 interface MembersProps {
@@ -34,7 +37,7 @@ const Members: React.FC<MembersProps> = ({ member }) => {
 
                 <Row className="member-button-row">
                     <Col>
-                        <button className="button-standard" type="button">Conhecer mais <FaUserMd size={20} /></button>
+                        <Link to={`/members/${member.url}`} >Conhecer mais <FaUserMd size={20} /></Link>
                     </Col>
                 </Row>
             </div>

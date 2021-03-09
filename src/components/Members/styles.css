@@ -64,6 +64,17 @@
     height: 15%;
 }
 
+.member-button-row a {
+    color: #DAA7A6;
+    display: block;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.member-button-row a:hover {
+    color: #be8887;
+}
+
 @media (max-width: 1200px) {
     .member-container {
         height: 450px;
