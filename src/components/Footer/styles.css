@@ -19,11 +19,15 @@ footer {
     color: #fff;
 }
 
-.footer-section-text {
+footer a {
     color: #fff;
     display: block;
     text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.footer-section-text {
+    color: #fff;
 }
 
 .footer-section-text h6 {
@@ -62,12 +66,8 @@ footer {
     text-align: center;
 }
 
-.footer-section-text:hover {
-    color: rgba(255, 255, 255, .75);
-}
-
-.footer-bottom-link:hover {
-    color: rgba(255, 255, 255, .75);
+footer a:hover {
+    color: #DAA7A6;
 }
 
 @media (max-width: 768px) {

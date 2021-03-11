@@ -6,10 +6,11 @@ import './styles.css';
 
 interface PageHeaderProps {
     backgroundImage: string;
+    isBackgroundCenter: boolean;
     title: string;
 }
 
-const PageTop: React.FC<PageHeaderProps> = ({ backgroundImage, title }) => {
+const PageTop: React.FC<PageHeaderProps> = ({ backgroundImage, isBackgroundCenter, title }) => {
     useEffect(() => {
         ScrollReveal().reveal('.section-col-back', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
         ScrollReveal().reveal('.about-header-col', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
@@ -17,17 +18,21 @@ const PageTop: React.FC<PageHeaderProps> = ({ backgroundImage, title }) => {
 
     return (
         <>
-            <header className="about-header" style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <header className="top-header" style={{
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundPositionY: isBackgroundCenter ? 'center' : '30%'
+            }}
+            >
                 <Container style={{ height: '100%' }}>
                     <Row style={{ height: '100%', alignItems: 'flex-end' }}>
                         <Col>
-                            <div className="about-header-div">
+                            <div className="top-header-div">
                                 <Row>
                                     <div className="section-col-back block-with-text">
-                                        <h1 className="about-header-back-h1">{title}</h1>
+                                        <h1 className="top-header-back-h1">{title}</h1>
                                     </div>
-                                    <Col className="about-header-col">
-                                        <h1 className="about-header-h1">{title}</h1>
+                                    <Col className="top-header-col">
+                                        <h1 className="top-header-h1">{title}</h1>
                                     </Col>
                                 </Row>
                             </div>
@@ -40,7 +45,7 @@ const PageTop: React.FC<PageHeaderProps> = ({ backgroundImage, title }) => {
                 <Container>
                     <Row className="mb-5">
                         <Col>
-                            <div className="about-article-div"></div>
+                            <div className="top-article-div"></div>
                         </Col>
                     </Row>
                 </Container>

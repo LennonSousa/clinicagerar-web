@@ -32,7 +32,7 @@ function Members() {
         <>
             <PageHeader activeLink="about" />
 
-            <PageTop backgroundImage={member ? member.cover : ''} title={member ? member.title : ''} />
+            <PageTop backgroundImage={member ? member.cover : ''} isBackgroundCenter={false} title={member ? member.title : ''} />
 
             <article>
                 <Container>

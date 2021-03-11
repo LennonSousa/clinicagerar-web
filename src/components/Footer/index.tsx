@@ -29,9 +29,32 @@ function Footer() {
 
                         <Row>
                             <Col>
-                                <Link className="footer-section-text" to="/"><h6><FaInstagram size={24} /> @clinicagerar</h6></Link>
-                                <Link className="footer-section-text" to="/"><h6><FaFacebookSquare size={24} /> Clinica Gerar Imperatriz</h6></Link>
-                                <Link className="footer-section-text" to="/"><h6><FaWhatsapp size={24} /> 99 98798-4898</h6></Link>
+                                <a
+                                    className="footer-section-text"
+                                    href="https://www.instagram.com/clinicagerar/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <h6><FaInstagram size={24}
+                                    /> @clinicagerar</h6></a>
+
+                                <a
+                                    className="footer-section-text"
+                                    href="https://www.instagram.com/clinicagerar/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <h6><FaFacebookSquare size={24}
+                                    /> Clinica Gerar Imperatriz</h6></a>
+
+                                <a
+                                    className="footer-section-text"
+                                    href="https://api.whatsapp.com/send?phone=+5599991091718"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <h6><FaWhatsapp size={24}
+                                    /> 99 98798-4898</h6></a>
                             </Col>
                         </Row>
                     </Col>
@@ -39,17 +62,20 @@ function Footer() {
                     <Col className="pt-3 pb-3" sm={3}>
                         <Row>
                             <Col>
-                                <h5 className="footer-section-title">Serviços</h5>
+                                <Link to="/our-services">
+                                    <h5 className="footer-section-title">Serviços</h5>
+                                </Link>
+
                             </Col>
                         </Row>
 
                         <Row>
                             <Col>
-                                <Link className="footer-section-text" to="/"><h6>Ginecologia</h6></Link>
-                                <Link className="footer-section-text" to="/"><h6>Obstetrícia</h6></Link>
-                                <Link className="footer-section-text" to="/"><h6>Ultrassonografia</h6></Link>
-                                <Link className="footer-section-text" to="/"><h6>Medicina fetal</h6></Link>
-                                <Link className="footer-section-text" to="/"><h6>Cirurgia plástica</h6></Link>
+                                <div className="footer-section-text"><h6>Ginecologia</h6></div>
+                                <div className="footer-section-text"><h6>Obstetrícia</h6></div>
+                                <div className="footer-section-text"><h6>Ultrassonografia</h6></div>
+                                <div className="footer-section-text"><h6>Medicina fetal</h6></div>
+                                <div className="footer-section-text"><h6>Cirurgia plástica</h6></div>
                             </Col>
                         </Row>
                     </Col>

@@ -10,7 +10,6 @@ import './styles.css'
 export interface OurService {
     id: number;
     title: string;
-    description: string;
     image: string;
 }
 
@@ -33,7 +32,7 @@ const OurServices: React.FC<OurServicesProps> = ({ ourService }) => {
                             <h3 className="service-content-title">{ourService.title}</h3>
                         </Col>
                         <Col sm={10}>
-                            <Link to="/" className="service-content-more nav-link">Saber mais <FaAngleRight size={20} /></Link>
+                            <Link to="/our-services" className="service-content-more nav-link">Saber mais <FaAngleRight size={20} /></Link>
                         </Col>
                     </Row>
                 </div>

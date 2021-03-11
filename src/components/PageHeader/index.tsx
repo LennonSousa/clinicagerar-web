@@ -8,7 +8,7 @@ import logoImg from '../../assets/images/logo-horizontal-branco.svg';
 import scheduleImage from '../../assets/images/undraw_Work_time_re_hdyv.svg';
 
 interface PageHeaderProps {
-    activeLink?: "home" | "about" | "schedule" | "contact";
+    activeLink?: "home" | "about" | "our-services" | "schedule" | "contact";
 }
 
 const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
@@ -115,7 +115,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                         <Nav className="mr-auto">
                             <Link to="/" className={`nav-link ${activeLink === "home" ? 'nav-header-link-active' : 'nav-header-link'}`}>INÍCIO</Link>
                             <Link to="/about" className={`nav-link ${activeLink === "about" ? 'nav-header-link-active' : 'nav-header-link'}`}>SOBRE NÓS</Link>
-                            <Link to="/schedule" className={`nav-link ${activeLink === "schedule" ? 'nav-header-link-active' : 'nav-header-link'}`}>AGENDAMENTO</Link>
+                            <Link to="/our-services" className={`nav-link ${activeLink === "our-services" ? 'nav-header-link-active' : 'nav-header-link'}`}>NOSSOS SERVIÇOS</Link>
                             <Link to="/contact" className={`nav-link ${activeLink === "contact" ? 'nav-header-link-active' : 'nav-header-link'}`}>CONTATO</Link>
 
                             <div className="nav-bottom-links-container">

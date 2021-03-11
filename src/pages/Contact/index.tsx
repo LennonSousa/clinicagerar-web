@@ -37,7 +37,7 @@ function Contact() {
         <>
             <PageHeader activeLink="contact" />
 
-            <PageTop backgroundImage={headerImage} title="Contato" />
+            <PageTop backgroundImage={headerImage} isBackgroundCenter title="Contato" />
 
             <article>
                 <Container>
@@ -109,7 +109,8 @@ function Contact() {
                                         </Row>
                                         <Row className="pt-4">
                                             <Col>
-                                                <p>contato@clinicageraritz.com.br</p>
+                                                <p>cliente@clinicageraritz.com.br</p>
+                                                <p>financeiro@clinicageraritz.com.br</p>
                                             </Col>
                                         </Row>
                                     </Col>
@@ -235,8 +236,8 @@ function Contact() {
                                                 </Form.Group>
                                             </Col>
                                         </Row>
-                                        <Row className="justify-content-end text-center mt-3">
-                                            <Col sm={2}>
+                                        <Row className="justify-content-end contact-form-row-button mt-3">
+                                            <Col sm={3}>
                                                 <button className="button-standard" disabled={isValid ? false : true} type="submit">{
                                                     isSendingMessage ? <>Enviando <Spinner
                                                         as="span"

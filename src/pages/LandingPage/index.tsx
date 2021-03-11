@@ -154,15 +154,18 @@ function LandingPage() {
                         <Col className="col-mark pt-2 pb-5" sm={7}>
                             <Row className="justify-content-end">
                                 <Col sm={8}>
-                                    <p className="title-light"><FaRegEnvelope size={24} />{` `}Por e-mail</p>
+                                    <p className="title-light"><FaRegEnvelope size={24} />{` `}Agendamento on-line</p>
                                 </Col>
 
                                 <Col sm={8}>
-                                    <p className="sub-title">Você preenche os seus dados, escolhe o seu plano e retornaremos com a confirmação do seu agendamento.</p>
+                                    <p className="sub-title">Você preenche os seus dados, escolhe o dia e marca a sua consulta. Tudo muito fácil e rápido.</p>
                                 </Col>
 
                                 <Col sm={8}>
-                                    <button className="button-standard" type="button">Agendar por e-mail</button>
+                                    <button className="button-standard" onClick={(e) => {
+                                        e.preventDefault();
+                                        window.open('https://www.doctoralia.com.br/z/EAPEkA', '_blank');
+                                    }} type="button">Agendar agora</button>
                                 </Col>
                             </Row>
 
@@ -176,7 +179,10 @@ function LandingPage() {
                                 </Col>
 
                                 <Col sm={8}>
-                                    <button className="button-standard" type="button">Agendar por whatsapp</button>
+                                    <button className="button-standard" onClick={(e) => {
+                                        e.preventDefault();
+                                        window.open('https://api.whatsapp.com/send?phone=+5599991091718', '_blank');
+                                    }} type="button">Agendar por whatsapp</button>
                                 </Col>
                             </Row>
                         </Col>
@@ -202,7 +208,6 @@ function LandingPage() {
                             {
                                 id: 1,
                                 title: 'Ginecologia',
-                                description: 'Técnica também conhecida como "bebê de proveta", a fertilização in vitro (FIV) é um processo em que a fertilização do óvulo com espermatozoide é feita em laboratório.',
                                 image: service02Icon
                             }
                         } />
@@ -211,7 +216,6 @@ function LandingPage() {
                             {
                                 id: 2,
                                 title: 'Obstetrícia',
-                                description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
                                 image: service03Icon
                             }
                         } />
@@ -220,7 +224,6 @@ function LandingPage() {
                             {
                                 id: 3,
                                 title: 'Ultrassonografia',
-                                description: 'A ultrassonografia é uma técnica médica, não invasiva, utilizada para reproduzir imagens dinâmicas – observadas em tempo real - dos órgãos internos, tecidos, rede vascular e fluxo sanguíneo, auxiliando, complementando e interagindo com outras especialidades médicas.',
                                 image: service01Icon
                             }
                         } />
@@ -229,16 +232,13 @@ function LandingPage() {
                             {
                                 id: 1,
                                 title: 'Medicina fetal',
-                                description: 'Técnica também conhecida como "bebê de proveta", a fertilização in vitro (FIV) é um processo em que a fertilização do óvulo com espermatozoide é feita em laboratório.',
-                                image: service04Icon
-                            }
+                                image: service04Icon                          }
                         } />
 
                         <OurService ourService={
                             {
                                 id: 2,
                                 title: 'Reprodução humana',
-                                description: 'A Medicina fetal é uma especialidade que visa o acompanhamento detalhado de gestações através de aconselhamento genético, ultrassonografia e procedimentos invasivos, sempre visando o bem estar do binômio mãe-feto. ',
                                 image: service05Icon
                             }
                         } />
@@ -247,7 +247,6 @@ function LandingPage() {
                             {
                                 id: 3,
                                 title: 'Cirurgia plástica',
-                                description: 'A ultrassonografia é uma técnica médica, não invasiva, utilizada para reproduzir imagens dinâmicas – observadas em tempo real - dos órgãos internos, tecidos, rede vascular e fluxo sanguíneo, auxiliando, complementando e interagindo com outras especialidades médicas.',
                                 image: service06Icon
                             }
                         } />

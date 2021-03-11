@@ -15,7 +15,7 @@ function About() {
         <>
             <PageHeader activeLink="about" />
 
-            <PageTop backgroundImage={headerImage} title="Sobre nós" />
+            <PageTop backgroundImage={headerImage} isBackgroundCenter title="Sobre nós" />
 
             <article>
                 <Container>

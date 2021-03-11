@@ -1,43 +1,65 @@
-.top-header {
+.about-header {
     height: 450px;
     position: relative;
+    background-position: center;
     background-size: cover;
 }
 
-.top-header-div{
+.about-header-div {
     height: 150px;
     display: flex;
     background-color: rgba(0, 58, 60, 0.7);
     border-radius: 10px 10px 0px 0px;
 }
 
-.top-header-col{
+.about-header-col {
     padding-top: 60px;
 }
 
-.top-header-h1 {
+.about-header-h1 {
     color: #fff !important;
     padding-left: 15px;
     font-size: 6rem !important;
 }
 
-.top-header-back-h1 {
+.about-header-back-h1 {
     color: #fff !important;
 }
 
-.top-article-div{
+.about-article-div {
     height: 30px;
     display: flex;
     background-color: rgba(0, 58, 60, 0.7);
     border-radius: 0px 0px 10px 10px;
 }
 
+.service-item-div {
+    display: flex;
+    box-shadow: 2px 2px 5px -4px #747474;
+    padding: 20px;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+
+.service-item-div:hover {
+    box-shadow: 2px 2px 9px -4px #747474;
+}
+
+.service-item-col-img {
+    height: 200px;
+    text-align: center;
+}
+
+.service-item-img {
+    height: inherit;
+    border-radius: 5px;
+}
+
 @media (max-width: 768px) {
-    .top-header-col{
+    .about-header-col {
         padding-top: 15px;
     }
-
-    .top-header-h1 {
+    .about-header-h1 {
         font-size: 4rem !important;
         line-height: 5rem;
     }

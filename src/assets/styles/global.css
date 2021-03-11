@@ -27,6 +27,11 @@ h4, h5 {
     color: #DAA7A6;
 }
 
+.article-sub-title{
+    font: 600 1.5rem Nunito, sans-serif;
+    color: #003A3C;
+}
+
 .article-text{
     font: 400 1rem Nunito, sans-serif;
     color: #757575;
