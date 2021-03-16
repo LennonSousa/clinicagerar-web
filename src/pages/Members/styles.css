@@ -33,6 +33,10 @@
     border-radius: 0px 0px 10px 10px;
 }
 
+.members-article-image{
+    border-radius: 5px;
+}
+
 @media (max-width: 768px) {
     .members-header-col{
         padding-top: 15px;

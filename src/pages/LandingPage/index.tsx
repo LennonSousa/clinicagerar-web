@@ -11,6 +11,7 @@ import Members from '../../components/Members';
 import Footer from '../../components/Footer';
 
 // Datas
+import landingSlides from '../../data/landingSlides';
 import membersList from '../../data/members';
 
 import 'leaflet/dist/leaflet.css';
@@ -18,10 +19,6 @@ import './styles.css'
 
 import mapPin from '../../assets/images/map-pin.svg';
 import imageDoctors from '../../assets/images/undraw_doctors_hwty.svg';
-
-import ImageSlide01 from '../../assets/images/slide-item-01.jpg';
-import ImageSlide02 from '../../assets/images/slide-item-02.jpg';
-import ImageSlide03 from '../../assets/images/slide-item-03.jpg';
 
 import carouselImgBottom from '../../assets/images/header-carousel-bottom.svg';
 
@@ -39,6 +36,10 @@ import mapArticleContainerTop from '../../assets/images/visit-us-container-top.s
 import newsArticleImg from '../../assets/images/news-01.jpg';
 
 import visitUsArticleBackground from '../../assets/images/visit-us-background.jpg';
+
+import works01Img from '../../assets/images/convenios-unimed.svg';
+import works02Img from '../../assets/images/convenios-bradesco.svg';
+import works03Img from '../../assets/images/convenios-cassi.svg';
 
 require('dotenv/config');
 
@@ -63,69 +64,31 @@ function LandingPage() {
 
             <header>
 
-                <Carousel indicators={true} nextLabel="" prevLabel="" interval={5000} fade={true}>
-                    <Carousel.Item style={{ backgroundColor: '#003A3C' }}>
-                        <div className="header-carousel-col" style={{ backgroundImage: `url(${ImageSlide01})` }}>
-                            <Container className="header-carousel-caption-container">
-                                <Row className="header-carousel-caption-row justify-content-center align-items-center text-center">
-                                    <Col className="col-10" sm={8}>
-                                        <div style={{ backgroundColor: `${'#003A3C'}85` }} className="header-carousel-caption-content">
-                                            <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
-                                                <Col sm={10}>
-                                                    <h1 className="visit-us-title-h1">Título do primeiro slide</h1>
-                                                </Col>
-                                                <Col sm={10}>
-                                                    <p className="header-carousel-caption-content-p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </div>
-                    </Carousel.Item>
-
-                    <Carousel.Item style={{ backgroundColor: '#003A3C' }}>
-                        <div className="header-carousel-col" style={{ backgroundImage: `url(${ImageSlide02})` }}>
-                            <Container className="header-carousel-caption-container">
-                                <Row className="header-carousel-caption-row justify-content-center align-items-center text-center">
-                                    <Col className="col-10" sm={8}>
-                                        <div style={{ backgroundColor: `${'#f97352'}85` }} className="header-carousel-caption-content">
-                                            <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
-                                                <Col sm={10}>
-                                                    <h1 className="visit-us-title-h1">Título do segundo slide</h1>
-                                                </Col>
-                                                <Col sm={10}>
-                                                    <p className="header-carousel-caption-content-p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </div>
-                    </Carousel.Item>
-
-                    <Carousel.Item style={{ backgroundColor: '#003A3C' }}>
-                        <div className="header-carousel-col" style={{ backgroundImage: `url(${ImageSlide03})` }}>
-                            <Container className="header-carousel-caption-container">
-                                <Row className="header-carousel-caption-row justify-content-center align-items-center text-center">
-                                    <Col className="col-10" sm={8}>
-                                        <div style={{ backgroundColor: `${'#003A3C'}85` }} className="header-carousel-caption-content">
-                                            <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
-                                                <Col sm={10}>
-                                                    <h1 className="visit-us-title-h1">Título do terceiro slide</h1>
-                                                </Col>
-                                                <Col sm={10}>
-                                                    <p className="header-carousel-caption-content-p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </div>
-                    </Carousel.Item>
+                <Carousel indicators={true} nextLabel="" prevLabel="" interval={3500} fade={true}>
+                    {
+                        landingSlides.map((slide, index) => {
+                            return <Carousel.Item key={index} style={{ backgroundColor: '#003A3C' }}>
+                                <div className="header-carousel-col" style={{ backgroundImage: `url(${slide.cover})` }}>
+                                    <Container className="header-carousel-caption-container">
+                                        <Row className="header-carousel-caption-row justify-content-center align-items-center text-center">
+                                            <Col className="col-10" sm={8}>
+                                                <div style={{ backgroundColor: slide.color }} className="header-carousel-caption-content">
+                                                    <Row className="header-carousel-caption-content-row justify-content-center align-items-center">
+                                                        <Col sm={10}>
+                                                            <h1 className="visit-us-title-h1">{slide.title}</h1>
+                                                        </Col>
+                                                        <Col sm={10}>
+                                                            <p className="header-carousel-caption-content-p">{slide.description}</p>
+                                                        </Col>
+                                                    </Row>
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </Container>
+                                </div>
+                            </Carousel.Item>
+                        })
+                    }
                 </Carousel>
             </header>
 
@@ -232,7 +195,8 @@ function LandingPage() {
                             {
                                 id: 1,
                                 title: 'Medicina fetal',
-                                image: service04Icon                          }
+                                image: service04Icon
+                            }
                         } />
 
                         <OurService ourService={
@@ -359,7 +323,6 @@ function LandingPage() {
                         <Row className="justify-content-center">
                             <Carousel className="visit-us-article-carousel" indicators={true} nextLabel="" prevLabel="" interval={5000} fade={true}>
                                 <Carousel.Item title="Nossa recepção">
-                                    <Image fluid src={ImageSlide01} />
                                     <Carousel.Caption>
                                         <h3>First slide label</h3>
                                         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -369,6 +332,34 @@ function LandingPage() {
                         </Row>
                     </Container>
                 </div>
+            </article>
+
+            <article className="works-article section-top">
+                <Container>
+                    <Row>
+                        <div className="section-col-back block-with-text">
+                            <h1>Nossos convênios</h1>
+                        </div>
+
+                        <Col className="section-col">
+                            <h1>Nossos convênios</h1>
+                        </Col>
+                    </Row>
+
+                    <Row className="justify-content-center align-items-center">
+                        <Col sm={3} className="mt-5">
+                            <Image src={works01Img} fluid alt="Convênio Unimed" />
+                        </Col>
+
+                        <Col sm={3} className="mt-5">
+                            <Image src={works02Img} fluid alt="Convênio Bradesco" />
+                        </Col>
+
+                        <Col sm={3} className="mt-5">
+                            <Image src={works03Img} fluid alt="Convênio Cassin" />
+                        </Col>
+                    </Row>
+                </Container>
             </article>
 
             <Footer />

@@ -8,9 +8,13 @@ import './styles.css';
 export interface Member {
     id: number;
     title: string;
+    specialist: string;
     description: string;
+    treatments: string;
+    university: string;
     image: string;
     cover: string;
+    articleImage: string;
     url: string;
 }
 
@@ -31,7 +35,7 @@ const Members: React.FC<MembersProps> = ({ member }) => {
                 <Row className="member-description-row pt-3 pb-3">
                     <Col>
                         <h3 className="member-title">{member.title}</h3>
-                        <h6 className="member-sub-title">Especialidade do médido.</h6>
+                        <h6 className="member-sub-title">{member.specialist}</h6>
                     </Col>
                 </Row>
 

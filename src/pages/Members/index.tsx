@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
 import PageHeader from '../../components/PageHeader';
 import PageTop from '../../components/PageTop';
@@ -36,17 +36,33 @@ function Members() {
 
             <article>
                 <Container>
-                    <Row className="mt-5">
-                        <Col>
-                            <h2 className="article-title">Somos especialistas em Obstetrícia, Ginecologia e Reprodução Humana Assistida.</h2>
+                    <Row className="mt-5 justify-content-center">
+                        <Col sm={9}>
+                            <h2 className="article-title">{`Sou especialista em ${member?.specialist}`}</h2>
                         </Col>
                     </Row>
 
-                    <Row className="mt-5 mb-5">
-                        <Col className="article-text">
-                            <p>Despite our size we have successfully negotiated with TAFE’s, Private Training Organisations and Trade Training Centres to ensure students are completing courses that meet their pathway planning and future aspirations.
+                    <Row className="mt-5 mb-5 justify-content-center">
+                        <Col className="article-text" sm={5}>
+                            <p>{member?.description}</p>
+                        </Col>
+                        <Col className="article-text" sm={4}>
+                            <Image className="members-article-image" fluid src={member?.articleImage} alt={member?.title} />
+                        </Col>
+                    </Row>
 
-In 2018 we will be delivering Certificate II in Outdoor Recreation. Our staff will be able to provide outdoor activities available locally and within the region.</p>
+                    <Row className="mt-5 mb-5 justify-content-center">
+                        <Col sm={9}>
+                            <h2 className="article-title">Tratamentos</h2>
+                        </Col>
+                        <Col className="article-text" sm={9}>
+                            <p>{member?.treatments}</p>
+                        </Col>
+                    </Row>
+
+                    <Row className="mt-5 mb-5 justify-content-center">
+                        <Col className="article-text" sm={9}>
+                            <p>{`Formação: ${member?.university}`}</p>
                         </Col>
                     </Row>
                 </Container>

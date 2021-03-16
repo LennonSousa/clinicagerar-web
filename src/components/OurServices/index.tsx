@@ -25,7 +25,7 @@ const OurServices: React.FC<OurServicesProps> = ({ ourService }) => {
                 <div className="service-container-background-hidden"></div>
                 <div className="service-content" style={{ backgroundImage: `url(${ourServicesBackground})` }} >
                     <Row className="service-content-row justify-content-center align-items-center">
-                        <Col className="col-5" sm={6}>
+                        <Col className="col-5" sm={5}>
                             <Image className="service-content-icon" src={ourService.image} alt={ourService.title} fluid />
                         </Col>
                         <Col sm={10}>

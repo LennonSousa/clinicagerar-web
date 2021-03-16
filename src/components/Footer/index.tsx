@@ -12,7 +12,7 @@ function Footer() {
         <footer style={{ backgroundImage: `url(${footerBackground})` }}>
             <Container className="footer-container">
                 <Row className="footer-row justify-content-center align-items-center pt-5">
-                    <Col className="pt-3 pb-3" sm={3}>
+                    <Col className="pt-5 pb-3" sm={3}>
                         <Row className="justify-content-center">
                             <Col className="col-6" sm={8}>
                                 <Image fluid src={logoImg} alt="Logomarca Clínica Gerar" />
