@@ -14,10 +14,17 @@ export const members: Member[] = [
         id: 0,
         title: 'Dr. Evaldo Reis Silva',
         specialist: 'Infertilidade, Reprodução Assistida, Obstetrícia, Medicina Fetal e Ultrassonografia.',
-        description: 'Descrição.',
+        description: 'Médico graduado pela Universidade Federal do Maranhão. ' +
+        'Inscrito no Conselho Regional de Medicina do Maranhão sob nº 2123. Registro de Qualificação e Especialidade /RQE nº 1466, ' +
+        'Título de especialista em Ginecologia e Obstetrícia pela Federação Brasileira de Ginecologia e Obstetrícia (FEBRASGO). ' +
+        'Título de especialidade em Reprodução Humana pelo Instituto de Ensino e Pesquisa (IEP) do Hospital Sírio Libanês – SP. ' +
+        'Membro efetivo da Federação Brasileira de Ginecologia e Obstetrícia (FEBRASGO/SOGIMA). ' +
+        'Membro efetivo da Sociedade Brasileira de Reprodução Assistida (SBRA). ' +
+        'Membro efetivo da Sociedade Brasileira de Reprodução Humana (SBRH). ' +
+        'Membro efetivo da Sociedade Brasileira de Ultrassonografia (SBUS).',
         treatments: 'Menopausa, Endometriose, Distúrbios Menstruais, Mioma, Síndrome Do Ovário Policístico, Cistos Ovarianos, HPV, Complicações Na Gravidez, ' +
         'Gravidez de risco, Infertilidade, Cirurgia Ginecológica Minimamente Invasiva.',
-        university: 'Universidade Federal do Maranhão',
+        university: 'Universidade Federal do Maranhão - CRM/MA: 2123 RQE: 1466',
         image: teamMember01,
         cover: teamMemberCover01,
         articleImage: teamMemberArticle01,
@@ -33,7 +40,7 @@ export const members: Member[] = [
         'Amenorréia, Pólipo endometrial, Inseminação Intrauterina, Plástica Ginecológica, Rejuvenescimento Intimo (Aplicação de fraxx), Laparoscopia Ginecológica, ' + 
         'Obstetrícia, Calendário vacinal da mulher, Implantes Hormonais, Síndrome dos ovários policísticos, Disturbios hormonais, Implantes hormonais, Gestação de Alto Risco, ' +
         'Osteoporose, Abortamento habitual, Puberdade precoce e Tardia, Lesões precursoras do câncer de colo uterino.',
-        university: 'Universidade Federal do Maranhão',
+        university: 'Universidade Federal do Maranhão - CRM/MA 2236  RQE: 1465',
         image: teamMember02,
         cover: teamMemberCover02,
         articleImage: teamMemberArticle02,

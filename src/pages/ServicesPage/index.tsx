@@ -31,10 +31,9 @@ function ServicesPage() {
                     </Row>
 
                     <Row className="mt-5 mb-5">
-                        <Col className="article-text">
-                            <p>Despite our size we have successfully negotiated with TAFE’s, Private Training Organisations and Trade Training Centres to ensure students are completing courses that meet their pathway planning and future aspirations.
-
-In 2018 we will be delivering Certificate II in Outdoor Recreation. Our staff will be able to provide outdoor activities available locally and within the region.</p>
+                        <Col sm={6} className="article-text">
+                            <p>Aqui na Clínica Gerar Imperatriz nós oferecemos vários serviços, exames e consultas para você que busca qualidade de vida, ótimo
+                                atendimento e profissionais competentes.</p>
                         </Col>
                     </Row>
 
@@ -57,8 +56,8 @@ In 2018 we will be delivering Certificate II in Outdoor Recreation. Our staff wi
 
                                                 <Row>
                                                     <Col className="article-text">
-                                                        <p>Despite our size we have successfully negotiated with TAFE’s, Private Training Organisations and Trade Training Centres.
-                                                Certificate II in Outdoor Recreation. Our staff will be able to provide outdoor activities available locally and within the region.</p>
+                                                        <p>Ginecologia é a especialização da Medicina que cuida do diagnóstico e tratamento da saúde da mulher, desde a infância até a terceira idade.
+                                                            É função básica do Ginecologista (médico especializado em ginecologia) cuidar de todo tipo de doença do sistema reprodutor feminino.</p>
                                                     </Col>
                                                 </Row>
                                             </Col>
@@ -84,9 +83,11 @@ In 2018 we will be delivering Certificate II in Outdoor Recreation. Our staff wi
 
                                                 <Row>
                                                     <Col className="article-text">
-                                                        <p>Despite our size we have successfully negotiated with TAFE’s, Private Training Organisations and Trade Training Centres.
-                                                        Certificate II in Outdoor Recreation. Our staff will be able to provide outdoor activities available locally and within the region.
-                                                </p>
+                                                        <p>O obstetra realiza consultas, orienta e aconselha a
+                                                        mulher e familiares ao longo do período gestacional, realiza o parto e cuida da mulher e da criança durante o puerpério.
+                                                        Ele cuida dos exames, avalia o histórico família, receita medicamentos e vitaminas e cuida de todos os procedimentos
+                                                        necessários para detectar possíveis problemas com a mãe ou o bebê
+                                                            </p>
                                                     </Col>
                                                 </Row>
                                             </Col>
@@ -120,8 +121,9 @@ In 2018 we will be delivering Certificate II in Outdoor Recreation. Our staff wi
 
                                                 <Row>
                                                     <Col className="article-text">
-                                                        <p>Despite our size we have successfully negotiated with TAFE’s, Private Training Organisations and Trade Training Centres.
-                                                        Certificate II in Outdoor Recreation. Our staff will be able to provide outdoor activities available locally and within the region.
+                                                        <p>A ultrassonografia (ou ecografia) é um método inócuo e relativamente barato de produzir em tempo real 
+                                                            imagens em movimento das estruturas e órgãos do interior do corpo. Em virtude de ser um exame de realização 
+                                                            muito simples, costuma ser usado para fins preventivos, diagnósticos ou como acompanhamento de tratamentos.
                                                         </p>
                                                     </Col>
                                                 </Row>
@@ -148,8 +150,11 @@ In 2018 we will be delivering Certificate II in Outdoor Recreation. Our staff wi
 
                                                 <Row>
                                                     <Col className="article-text">
-                                                        <p>Despite our size we have successfully negotiated with TAFE’s, Private Training Organisations and Trade Training Centres.
-                                                Certificate II in Outdoor Recreation. Our staff will be able to provide outdoor activities available locally and within the region.</p>
+                                                        <p>Nossa função é de ser um complemento para a atividade do obstetra. Uma vez que a doença é 
+                                                            diagnosticada a partir do pré-natal, ou há suspeita de uma condição de anomalia, é importante ter 
+                                                            um médico especializado no assunto. Há também a possibilidade da avaliação da parte genética, que 
+                                                            é realizada por um geneticista
+                                                            </p>
                                                     </Col>
                                                 </Row>
                                             </Col>
@@ -183,8 +188,7 @@ In 2018 we will be delivering Certificate II in Outdoor Recreation. Our staff wi
 
                                                 <Row>
                                                     <Col className="article-text">
-                                                        <p>Despite our size we have successfully negotiated with TAFE’s, Private Training Organisations and Trade Training Centres.
-                                                Certificate II in Outdoor Recreation. Our staff will be able to provide outdoor activities available locally and within the region.</p>
+                                                        <p>Técnicas voltadas à manipulação de espermatozoides e óvulos, bem como técnicas de fertilização in vitro.</p>
                                                     </Col>
                                                 </Row>
                                             </Col>
@@ -210,9 +214,7 @@ In 2018 we will be delivering Certificate II in Outdoor Recreation. Our staff wi
 
                                                 <Row>
                                                     <Col className="article-text">
-                                                        <p>Despite our size we have successfully negotiated with TAFE’s, Private Training Organisations and Trade Training Centres.
-                                                        Certificate II in Outdoor Recreation. Our staff will be able to provide outdoor activities available locally and within the region.
-                                                </p>
+                                                        <p>Procedimento que visa aperfeiçoar o corpo e agregar melhorias tanto funcionais como na autoestima.</p>
                                                     </Col>
                                                 </Row>
                                             </Col>

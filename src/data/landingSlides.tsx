@@ -28,7 +28,7 @@ export const slides: Slide[] = [
     {
         id: 2,
         title: 'Exames de confiança',
-        description: 'Temos os melhores profissionais e equipamentos para lhe oferecer exames e consultas de confiaça.',
+        description: 'Temos os melhores profissionais e equipamentos para lhe oferecer exames e consultas de confiança.',
         cover: ImageSlide03,
         color: 'rgba(0, 58, 60, 0.52)',
     },

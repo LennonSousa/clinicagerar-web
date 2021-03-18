@@ -36,6 +36,7 @@ h4, h5 {
     font: 400 1rem Nunito, sans-serif;
     color: #757575;
     line-height: 1.9rem;
+    text-align: justify;
 }
 
 /* styles for '...' */

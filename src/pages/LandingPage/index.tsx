@@ -13,6 +13,7 @@ import Footer from '../../components/Footer';
 // Datas
 import landingSlides from '../../data/landingSlides';
 import membersList from '../../data/members';
+import visitUsList from '../../data/visitUsSlides';
 
 import 'leaflet/dist/leaflet.css';
 import './styles.css'
@@ -321,13 +322,22 @@ function LandingPage() {
                         </Row>
 
                         <Row className="justify-content-center">
-                            <Carousel className="visit-us-article-carousel" indicators={true} nextLabel="" prevLabel="" interval={5000} fade={true}>
-                                <Carousel.Item title="Nossa recepção">
-                                    <Carousel.Caption>
-                                        <h3>First slide label</h3>
-                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                    </Carousel.Caption>
-                                </Carousel.Item>
+                            <Carousel className="visit-us-article-carousel" indicators={true} nextLabel="" prevLabel="" interval={5000}>
+                                {
+                                    visitUsList.map((item, index) => {
+                                        return <Carousel.Item
+                                            className="visit-us-article-carrousel-item"
+                                            key={index}
+                                            title={item.title}
+                                            style={{ backgroundImage: `url(${item.cover})` }}
+                                        >
+                                            <Carousel.Caption>
+                                                <h3>{item.title}</h3>
+                                                <p>{item.description}</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    })
+                                }
                             </Carousel>
                         </Row>
                     </Container>

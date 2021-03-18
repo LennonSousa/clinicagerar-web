@@ -33,7 +33,7 @@ header {
 }
 
 .header-carousel-caption-content-p {
-    font: 200 16px Nunito, sans-serif;
+    font: 400 16px Nunito, sans-serif;
     color: #ffffff;
     padding: 0px 12px;
 }
@@ -189,11 +189,22 @@ header {
 }
 
 .visit-us-article-carousel {
+    padding: 0 !important;
     border-radius: 5px;
     -webkit-box-shadow: 2px 2px 9px -4px #000000;
     -moz-box-shadow: 2px 2px 9px -4px #000000;
     box-shadow: 2px 2px 9px -4px #000000;
-    padding: 0 !important;
+}
+
+.visit-us-article-carrousel-item {
+    border-radius: 5px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+
+.visit-us-article-carrousel-item p {
+    font-weight: 200;
 }
 
 .works-article {
